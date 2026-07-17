@@ -597,7 +597,32 @@ export type GalleryItem = {
   span?: 'tall' | 'wide' | 'normal'
 }
 
-export const GALLERY_ITEMS: GalleryItem[] = []
+export const GALLERY_ITEMS: GalleryItem[] = [
+  {
+    id: 'g1',
+    category: 'Campaign Highlights',
+    title: 'On the Campaign Trail',
+    type: 'image',
+    src: '/gallery-1.jpg',
+    span: 'tall',
+  },
+  {
+    id: 'g2',
+    category: 'Campaign Highlights',
+    title: 'With Supporters',
+    type: 'image',
+    src: '/gallery-2.jpg',
+    span: 'normal',
+  },
+  {
+    id: 'g3',
+    category: 'Campaign Highlights',
+    title: 'Community Engagement',
+    type: 'image',
+    src: '/gallery-3.jpg',
+    span: 'wide',
+  },
+]
 
 export type Testimonial = {
   name: string
