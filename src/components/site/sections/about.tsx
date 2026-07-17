@@ -246,12 +246,6 @@ export function AboutSection() {
                 </motion.div>
               ))}
             </div>
-            <a href="#media" className="mt-6 inline-flex">
-              <Button variant="outline" className="border-patriot-navy text-patriot-navy hover:bg-patriot-navy hover:text-white">
-                <Download className="h-4 w-4 mr-2" />
-                Download Full CV (PDF)
-              </Button>
-            </a>
           </div>
         </div>
       </div>
