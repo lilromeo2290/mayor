@@ -101,27 +101,7 @@ export function HeroSection() {
               </a>
             </motion.div>
 
-            {/* Floating stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl"
-            >
-              {CANDIDATE.stats.map((s, i) => (
-                <motion.div
-                  key={s.label}
-                  animate={{ y: [0, -8, 0] }}
-                  transition={{ duration: 5, repeat: Infinity, delay: i * 0.4, ease: 'easeInOut' }}
-                  className="glass rounded-2xl p-4 text-white"
-                >
-                  <div className="font-serif text-2xl sm:text-3xl font-bold text-patriot-gold">
-                    {s.value.toLocaleString()}
-                  </div>
-                  <div className="text-xs text-white/75 mt-1 leading-tight">{s.label}</div>
-                </motion.div>
-              ))}
-            </motion.div>
+            {/* Floating stats removed per request */}
           </div>
 
           {/* Right: portrait */}

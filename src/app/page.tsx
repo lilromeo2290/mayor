@@ -1,7 +1,6 @@
 'use client'
 
 import { SiteNav } from '@/components/site/site-nav'
-import { LiveTracker } from '@/components/site/live-tracker'
 import { HeroSection } from '@/components/site/sections/hero'
 import { AboutSection } from '@/components/site/sections/about'
 import { VisionSection } from '@/components/site/sections/vision'
@@ -22,7 +21,6 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <SiteNav />
-      <LiveTracker />
       <main className="flex-1">
         <HeroSection />
         <AboutSection />
