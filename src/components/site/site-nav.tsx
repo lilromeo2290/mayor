@@ -60,13 +60,13 @@ export function SiteNav() {
               <div className="hidden sm:block leading-tight">
                 <div
                   className={cn(
-                    'font-serif text-base font-bold tracking-tight',
+                    'font-serif text-lg font-extrabold tracking-tight',
                     scrolled ? 'text-foreground' : 'text-foreground'
                   )}
                 >
                   {CANDIDATE.shortName}
                 </div>
-                <div className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
+                <div className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground font-semibold">
                   {CANDIDATE.party}
                 </div>
               </div>
@@ -78,7 +78,7 @@ export function SiteNav() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-patriot-red transition-colors rounded-md hover:bg-muted/60"
+                  className="px-3 py-2 text-[15px] font-bold text-foreground/85 hover:text-patriot-red transition-colors rounded-md hover:bg-muted/60"
                 >
                   {link.label}
                 </a>
@@ -151,7 +151,7 @@ export function SiteNav() {
                         <SheetClose asChild key={link.href}>
                           <a
                             href={link.href}
-                            className="flex items-center justify-between rounded-lg px-3 py-3 text-base font-medium text-foreground hover:bg-muted transition-colors"
+                            className="flex items-center justify-between rounded-lg px-3 py-3 text-base font-bold text-foreground hover:bg-muted transition-colors"
                           >
                             {link.label}
                             <ChevronDown className="h-4 w-4 -rotate-90 text-muted-foreground" />
