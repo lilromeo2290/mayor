@@ -29,7 +29,7 @@ export function DonationSection() {
 
   const finalAmount = custom ? Number(custom) : amount
   const goal = 5_000_000
-  const raised = 3_470_500
+  const raised = 3_513_984
   const pct = Math.min(100, (raised / goal) * 100)
 
   const onSubmit = async (e: React.FormEvent) => {
@@ -94,7 +94,7 @@ export function DonationSection() {
               </div>
               <div className="text-right">
                 <div className="font-serif text-2xl font-bold text-patriot-gold">{pct.toFixed(1)}%</div>
-                <div className="text-xs text-white/70">funded by 28,400 donors</div>
+                <div className="text-xs text-white/70">funded by 28,560 donors</div>
               </div>
             </div>
             <div className="mt-5 h-3 rounded-full bg-white/10 overflow-hidden">
@@ -110,11 +110,11 @@ export function DonationSection() {
             </div>
             <div className="mt-4 grid grid-cols-3 gap-3 text-center">
               <div>
-                <div className="font-serif text-xl font-bold text-patriot-gold">28,400</div>
+                <div className="font-serif text-xl font-bold text-patriot-gold">28,560</div>
                 <div className="text-[10px] uppercase tracking-widest text-white/60">Donors</div>
               </div>
               <div>
-                <div className="font-serif text-xl font-bold text-patriot-gold">₵122</div>
+                <div className="font-serif text-xl font-bold text-patriot-gold">₵123</div>
                 <div className="text-[10px] uppercase tracking-widest text-white/60">Avg. gift</div>
               </div>
               <div>

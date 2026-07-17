@@ -7,9 +7,9 @@ import { Flame, TrendingUp, Users } from 'lucide-react'
 export function LiveTracker() {
   const ref = React.useRef<HTMLDivElement>(null)
   const inView = useInView(ref, { once: true })
-  const TARGET_RAISED = 3_489_000
-  const [raised, setRaised] = React.useState(3_470_500)
-  const [donors, setDonors] = React.useState(28_400)
+  const TARGET_RAISED = 3_513_984
+  const [raised, setRaised] = React.useState(3_498_000)
+  const [donors, setDonors] = React.useState(28_560)
   const [secondsLeft, setSecondsLeft] = React.useState(() => {
     const election = new Date('2026-12-07T07:00:00Z').getTime()
     return Math.max(0, Math.floor((election - Date.now()) / 1000))
@@ -21,7 +21,7 @@ export function LiveTracker() {
     if (!inView || animatedRef.current) return
     animatedRef.current = true
     let raf = 0
-    const start = 3_470_500
+    const start = 3_498_000
     const end = TARGET_RAISED
     const duration = 1800
     const startTime = performance.now()
