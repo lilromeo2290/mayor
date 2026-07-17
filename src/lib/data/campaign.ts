@@ -577,17 +577,6 @@ export const EVENT_ITEMS: EventItem[] = [
       'An evening with the candidate and 400 business leaders. Sponsorship tables available. Proceeds support the campaign field programme.',
   },
   {
-    id: 'e5',
-    type: 'Community Visit',
-    title: 'Eastern Region Community Tour',
-    date: '2026-10-30T08:00:00',
-    time: '8:00 AM',
-    location: 'Koforidua, Nkawkaw, Suhum',
-    address: 'Multiple locations',
-    description:
-      'A three-town tour with market visits, school stops, and a closing rally in Koforidua. Open to all supporters.',
-  },
-  {
     id: 'e6',
     type: 'Campaign Launch',
     title: 'Manifesto Launch & Policy Forum',
