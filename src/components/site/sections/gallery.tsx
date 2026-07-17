@@ -33,26 +33,29 @@ export function GallerySection() {
           description="A visual journey through rallies, community visits, press briefings, and campaign highlights from across the country."
         />
 
-        {/* Filter tabs */}
-        <div className="mt-10 flex flex-wrap justify-center gap-2">
-          {CATEGORIES.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActive(cat)}
-              className={cn(
-                'px-4 py-2 rounded-full text-sm font-medium transition-all',
-                active === cat
-                  ? 'bg-patriot-navy text-white shadow-premium'
-                  : 'bg-muted text-muted-foreground hover:bg-muted/70 hover:text-foreground'
-              )}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
+        {/* Filter tabs (hidden when no items exist) */}
+        {GALLERY_ITEMS.length > 0 && (
+          <div className="mt-10 flex flex-wrap justify-center gap-2">
+            {CATEGORIES.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActive(cat)}
+                className={cn(
+                  'px-4 py-2 rounded-full text-sm font-medium transition-all',
+                  active === cat
+                    ? 'bg-patriot-navy text-white shadow-premium'
+                    : 'bg-muted text-muted-foreground hover:bg-muted/70 hover:text-foreground'
+                )}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+        )}
 
         {/* Masonry grid */}
-        <div className="mt-12 columns-1 sm:columns-2 lg:columns-3 gap-5 [column-fill:_balance]">
+        {GALLERY_ITEMS.length > 0 && (
+          <div className="mt-12 columns-1 sm:columns-2 lg:columns-3 gap-5 [column-fill:_balance]">
           {filtered.map((item, i) => (
             <motion.button
               key={item.id}
@@ -97,11 +100,12 @@ export function GallerySection() {
               </div>
             </motion.button>
           ))}
-        </div>
+          </div>
+        )}
 
-        {filtered.length === 0 && (
-          <p className="text-center py-12 text-muted-foreground">
-            No items in this category yet.
+        {GALLERY_ITEMS.length === 0 && (
+          <p className="text-center py-16 text-muted-foreground">
+            Gallery updates coming soon.
           </p>
         )}
       </div>
