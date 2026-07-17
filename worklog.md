@@ -1,0 +1,163 @@
+# Project Worklog — Amekplenu Campaign Website
+
+This worklog tracks all changes made to the campaign website and serves as the
+canonical record for commits pushed to the GitHub repository at
+`https://github.com/lilromeo2290/mayor.git`.
+
+**Repository**: https://github.com/lilromeo2290/mayor.git
+**Branch**: `main`
+**Project root**: `/home/z/my-project`
+**Started**: 2026-07-18
+
+---
+
+## Workflow Convention
+
+Every time a meaningful set of edits is made to the site, the agent MUST:
+
+1. Append a new dated entry to this file (use the `---` separator).
+2. Stage all changed files: `git add -A`
+3. Commit with a clear, descriptive message:
+   `git commit -m "<short summary of changes>"`
+4. Push to origin: `git push origin main`
+
+If a push fails due to auth, retry once. If it still fails, log the failure in
+this file and continue — do NOT block user-facing work on a push.
+
+---
+
+## Project Overview
+
+Premium political campaign website for **Emmanuel Senyo Amekplenu**, Volta
+Regional Youth Organizer Hopeful, running under the **New Patriotic Party
+(NPP)**. Built with Next.js + TypeScript + Tailwind CSS + Framer Motion.
+
+NPP brand colors:
+- Red: `#DA251D`
+- Royal Blue: `#1B3A8E`
+- Gold: `#D4AF37` (accent)
+- White
+
+---
+
+## Initial Setup
+
+- Date: 2026-07-18
+- Agent: main
+- Task: Wire project to GitHub remote and perform initial push.
+
+Work Log:
+- Verified existing git repo at `/home/z/my-project` on branch `main`.
+- Added remote `origin` pointing to `https://github.com/lilromeo2290/mayor.git`
+  using the provided GitHub token for authentication.
+- Added `/upload/` to `.gitignore` (temporary user-uploaded image staging area
+  should not be version-controlled).
+- Created this worklog file as the canonical record of changes.
+- Pushed existing local history to `origin/main` (new branch on remote).
+
+Stage Summary:
+- Remote configured: `origin` → `github.com/lilromeo2290/mayor.git`
+- Initial push successful; `main` branch tracking `origin/main`.
+- `.gitignore` updated to exclude `/upload/`.
+
+---
+
+## Customization History (pre-push recap)
+
+The following changes were already applied locally before the initial push.
+Future commits should append new entries below this section with concrete
+details, not retroactive summaries.
+
+### Rebranding: Alexander K. Mensah → Emmanuel Senyo Amekplenu
+
+- `src/lib/data/campaign.ts`: candidate name, shortName, title
+  (`Volta Regional Youth Organizer Hopeful`), party (`New Patriotic Party`),
+  slogan (`Service. Excellence. Accountability.`).
+- Bio fully rewritten for a youth-organizer profile.
+- News article titles, testimonials, FAQ entries all renamed.
+- `src/app/layout.tsx`: SEO metadata, Schema.org Person, site name
+  (`Amekplenu Campaign 2024`).
+
+### Navigation simplifications
+
+- `NAV_LINKS`: removed "Projects" item (10 items total).
+- Page flow: Hero → About → Vision → Manifesto → News → Events → Gallery →
+  Testimonials → Volunteer → Donate → Media Center → Contact.
+- Removed `<LiveTracker />` and `<AchievementsSection />` from `page.tsx`.
+
+### Hero section
+
+- Portrait: `/candidate-portrait.jpg` with `object-top`.
+- Slogan replaced with `Service. Excellence. Accountability.` (gold gradient).
+- Removed "Join the Movement" CTA button.
+- Removed floating stats block (22 Years / 4,500,000 Lives / etc.).
+- Removed declaration image that appeared above the slogan.
+
+### About / Vision / Manifesto
+
+- About: heading "Meet Emmanuel Senyo Amekplenu", removed "Download Full CV
+  (PDF)" button.
+- Vision: limited to first 6 pillars; "Twelve pillars" → "Six pillars"; Key
+  Goals block conditionally rendered when `goals.length > 0`.
+- Manifesto: limited to first 6 items; counter "of 12" → "of 6".
+- Economic Development pillar: `goals: []` and `detail: ''` (entire detail
+  paragraph removed per user request).
+
+### News / Events / Gallery / Media Center
+
+- News: limited to 3 items (1 featured + 2 compact).
+- Events: removed Eastern Region Community Tour entry; removed "Events & RSVP"
+  eyebrow.
+- Gallery: rebuilt — 12 images all categorized under "Filling of Nomination
+  Form" (renamed from "Campaign Highlights"); removed section description and
+  title overlay on each card; category badge still shown top-left.
+- Media Center: limited to 3 items (Manifesto PDF, Press Kit, Logo Pack).
+
+### Volunteer / Donate / Contact / Testimonials
+
+- Volunteer: removed "Join the Movement" badge and "Become a Volunteer" H2.
+- Donate: updated fundraising stats (₵3,513,984 raised; 28,560 donors; avg
+  gift ₵123); gradient updated to NPP blue `#1f3a8a`.
+- Contact: simplified to single National HQ office; only Facebook social link.
+- Testimonials: "Alexander Mensah" → "Emmanuel Amekplenu".
+
+### NPP color branding
+
+- `src/app/globals.css`: `--patriot-red` → `#DA251D` (light) / `#F0312A`
+  (dark); `--patriot-navy` → `#1B3A8E` (light) / `#2A4FA8` (dark); primary
+  hue shifted from 25 (red) to 258 (blue); all chart/sidebar/ring/accent
+  variables updated.
+- `.glass-dark`, `.shadow-premium`, `.shadow-premium-lg` rgba values updated
+  to NPP blue.
+- `live-tracker.tsx` and `donate.tsx`: hardcoded gradients updated.
+
+### Site navigation styling
+
+- `src/components/site/site-nav.tsx`: desktop nav links bumped to
+  `text-[15px] font-bold`; brand name to `text-lg font-extrabold`; party label
+  to `font-semibold`; mobile drawer links to `font-bold`.
+
+### Public assets added
+
+- `/public/candidate-portrait.jpg` — candidate portrait.
+- `/public/gallery-1.jpg` through `/public/gallery-12.jpg` — gallery images
+  sourced from user uploads.
+
+---
+
+## Changelog (forward-looking)
+
+Append new entries below this line using the format:
+
+```
+---
+## YYYY-MM-DD — <short title>
+
+- Agent: <main | subagent-name>
+- Files changed:
+  - <path>
+  - <path>
+- Summary: <what changed and why>
+
+Commit: <commit hash or "pending">
+```
