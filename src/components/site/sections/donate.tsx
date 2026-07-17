@@ -81,7 +81,7 @@ export function DonationSection() {
           transition={{ duration: 0.6 }}
           className="mt-12 max-w-4xl mx-auto"
         >
-          <Card className="p-6 sm:p-8 shadow-premium-lg bg-gradient-to-br from-patriot-navy to-[#10294a] text-white border-0">
+          <Card className="p-6 sm:p-8 shadow-premium-lg bg-gradient-to-br from-patriot-navy to-[#1f3a8a] text-white border-0">
             <div className="flex items-start justify-between gap-4 flex-wrap">
               <div>
                 <div className="text-xs uppercase tracking-widest text-patriot-gold font-semibold">

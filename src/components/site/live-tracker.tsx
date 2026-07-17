@@ -58,7 +58,7 @@ export function LiveTracker() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="relative bg-gradient-to-r from-patriot-navy via-[#0f2a4d] to-patriot-red text-white border-y border-patriot-gold/30 overflow-hidden"
+      className="relative bg-gradient-to-r from-patriot-navy via-[#1f3a8a] to-patriot-red text-white border-y border-patriot-gold/30 overflow-hidden"
     >
       {/* Marquee glow */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
