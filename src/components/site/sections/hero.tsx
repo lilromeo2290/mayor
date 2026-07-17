@@ -57,7 +57,7 @@ export function HeroSection() {
             >
               Leadership
               <br />
-              <span className="text-gradient-gold">You Can Trust</span>
+              <span className="text-gradient-gold">Service. Excellence. Accountability.</span>
             </motion.h1>
 
             <motion.p

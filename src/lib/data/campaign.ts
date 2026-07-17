@@ -30,7 +30,7 @@ export const CANDIDATE = {
   title: 'Candidate for National Parliament',
   party: 'United Progressive Front',
   constituency: 'Central Region Constituency',
-  slogan: 'Leadership You Can Trust',
+  slogan: 'Service. Excellence. Accountability.',
   tagline: 'Building a Better Future Together Through Unity, Integrity, and Development.',
   bio: [
     'Hon. Alexander K. Mensah is a seasoned public servant, accomplished economist, and devoted community leader who has spent more than two decades championing policies that uplift ordinary citizens. Born and raised in the heartland of the Central Region, Alexander rose from humble beginnings to become one of the most respected voices in public finance and grassroots development. His career has been defined by a steady commitment to transparency, evidence-based policymaking, and the firm belief that every citizen deserves access to quality education, healthcare, and economic opportunity.',

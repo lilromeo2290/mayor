@@ -21,7 +21,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Hon. Alexander K. Mensah — Leadership You Can Trust",
+  title: "Hon. Alexander K. Mensah — Service. Excellence. Accountability.",
   description:
     "Official campaign website for Hon. Alexander K. Mensah. Building a better future together through unity, integrity, and development. Join the movement, volunteer, donate, and read our manifesto.",
   keywords: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Mensah Campaign 2026" }],
   openGraph: {
-    title: "Hon. Alexander K. Mensah — Leadership You Can Trust",
+    title: "Hon. Alexander K. Mensah — Service. Excellence. Accountability.",
     description:
       "Building a Better Future Together Through Unity, Integrity, and Development.",
     siteName: "Mensah Campaign 2026",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hon. Alexander K. Mensah — Leadership You Can Trust",
+    title: "Hon. Alexander K. Mensah — Service. Excellence. Accountability.",
     description:
       "Building a Better Future Together Through Unity, Integrity, and Development.",
   },
