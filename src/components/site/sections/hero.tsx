@@ -137,9 +137,9 @@ export function HeroSection() {
               <div className="absolute -inset-1.5 rounded-[1.75rem] border border-white/20" />
               <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] shadow-premium-lg ring-1 ring-white/20">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=80"
+                  src="/candidate-portrait.jpg"
                   alt={`${CANDIDATE.name} — official portrait`}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover object-top"
                   loading="eager"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-patriot-navy/70 via-transparent to-transparent" />

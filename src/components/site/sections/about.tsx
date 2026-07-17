@@ -44,9 +44,9 @@ export function AboutSection() {
               <Card className="relative overflow-hidden rounded-2xl shadow-premium-lg">
                 <div className="aspect-[4/5] relative">
                   <img
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=80"
+                    src="/candidate-portrait.jpg"
                     alt={CANDIDATE.name}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover object-top"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-patriot-navy/80 via-transparent to-transparent" />
