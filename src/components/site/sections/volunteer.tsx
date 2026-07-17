@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { motion } from 'framer-motion'
-import { Users, Send, Sparkles, Heart, Megaphone } from 'lucide-react'
+import { Users, Send, Heart, Megaphone } from 'lucide-react'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -15,7 +15,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import { Badge } from '@/components/ui/badge'
 import { SectionHeading } from '@/components/site/section-heading'
 import { REGIONS, CONSTITUENCIES, SKILLS, VOLUNTEER_INTERESTS } from '@/lib/data/campaign'
 import { toast } from 'sonner'
@@ -77,10 +76,6 @@ export function VolunteerSection() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-5 lg:sticky lg:top-28"
           >
-            <Badge className="bg-patriot-red/10 text-patriot-red hover:bg-patriot-red/15 mb-4">
-              <Sparkles className="h-3 w-3 mr-1" />
-              Join the Movement
-            </Badge>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
               Become a <span className="text-gradient-gold">Volunteer</span>
             </h2>

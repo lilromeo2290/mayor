@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { ArrowRight, Heart, Users, FileText, ChevronDown, Flag } from 'lucide-react'
+import { Heart, Users, FileText, ChevronDown, Flag } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { CANDIDATE } from '@/lib/data/campaign'
 
@@ -75,12 +75,6 @@ export function HeroSection() {
               transition={{ duration: 0.7, delay: 0.3 }}
               className="mt-9 flex flex-wrap gap-3"
             >
-              <a href="#volunteer">
-                <Button size="lg" className="bg-patriot-gold hover:bg-patriot-gold/90 text-patriot-navy font-semibold shadow-premium-lg">
-                  Join the Movement
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </a>
               <a href="#volunteer">
                 <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 hover:text-white">
                   <Users className="mr-2 h-4 w-4" />
