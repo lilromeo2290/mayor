@@ -5,7 +5,6 @@ import { HeroSection } from '@/components/site/sections/hero'
 import { AboutSection } from '@/components/site/sections/about'
 import { VisionSection } from '@/components/site/sections/vision'
 import { ManifestoSection } from '@/components/site/sections/manifesto'
-import { AchievementsSection } from '@/components/site/sections/achievements'
 import { NewsSection } from '@/components/site/sections/news'
 import { EventsSection } from '@/components/site/sections/events'
 import { GallerySection } from '@/components/site/sections/gallery'
@@ -26,7 +25,6 @@ export default function Home() {
         <AboutSection />
         <VisionSection />
         <ManifestoSection />
-        <AchievementsSection />
         <NewsSection />
         <EventsSection />
         <GallerySection />
