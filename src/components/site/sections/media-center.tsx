@@ -47,7 +47,7 @@ export function MediaCenterSection() {
         />
 
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {MEDIA_DOWNLOADS.map((item, i) => {
+          {MEDIA_DOWNLOADS.slice(0, 3).map((item, i) => {
             const Icon = ICON_MAP[item.icon]
             return (
               <motion.div
