@@ -33,8 +33,6 @@ import { toast } from 'sonner'
 
 const OFFICES = [
   { name: 'National HQ', address: '12 Liberation Avenue, Ridge, Accra', phone: '+233 30 555 0142' },
-  { name: 'Kumasi Regional Office', address: 'Adum High Street, Kumasi', phone: '+233 32 555 0188' },
-  { name: 'Tamale Regional Office', address: 'Old Cemetery Road, Tamale', phone: '+233 37 555 0199' },
 ]
 
 const SOCIALS = [
