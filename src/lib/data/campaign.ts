@@ -654,6 +654,14 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     src: '/gallery-7.jpg',
     span: 'tall',
   },
+  {
+    id: 'g8',
+    category: 'Campaign Highlights',
+    title: 'Voices Heard',
+    type: 'image',
+    src: '/gallery-8.jpg',
+    span: 'wide',
+  },
 ]
 
 export type Testimonial = {
