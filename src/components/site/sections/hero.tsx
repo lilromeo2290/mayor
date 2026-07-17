@@ -39,25 +39,11 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-12 gap-10 items-center">
           {/* Left: copy */}
           <div className="lg:col-span-7 text-white">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-block"
-            >
-              <img
-                src="/declaration.jpg"
-                alt="Official Declaration — Emmanuel Senyo Amekplenu, Volta Regional Youth Organizer Hopeful"
-                className="max-h-48 sm:max-h-56 w-auto rounded-2xl shadow-premium-lg ring-1 ring-white/20 object-contain"
-                loading="eager"
-              />
-            </motion.div>
-
             <motion.h1
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="mt-6 font-serif text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight"
+              className="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight"
             >
               <span className="text-gradient-gold">Service. Excellence. Accountability.</span>
             </motion.h1>
