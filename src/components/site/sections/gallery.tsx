@@ -30,7 +30,6 @@ export function GallerySection() {
               Moments from <span className="text-gradient-gold">the Movement</span>
             </>
           }
-          description="A visual journey through rallies, community visits, press briefings, and campaign highlights from across the country."
         />
 
         {/* Filter tabs (hidden when no items exist) */}
@@ -91,11 +90,8 @@ export function GallerySection() {
                 </div>
               )}
               <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-left">
-                <div className="inline-flex items-center gap-1.5 text-xs text-patriot-gold font-medium mb-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="inline-flex items-center gap-1.5 text-xs text-patriot-gold font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                   <ZoomIn className="h-3.5 w-3.5" /> View
-                </div>
-                <div className="font-serif text-base font-bold leading-tight">
-                  {item.title}
                 </div>
               </div>
             </motion.button>
