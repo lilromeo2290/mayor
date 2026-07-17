@@ -49,7 +49,6 @@ export function EventsSection() {
     <section id="events" className="py-20 sm:py-28 bg-patriot-cream dark:bg-background/40 scroll-anchor">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Events & RSVP"
           title={
             <>
               Join Us on the <span className="text-gradient-gold">Campaign Trail</span>
