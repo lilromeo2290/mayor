@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { Heart, Users, FileText, ChevronDown, Flag } from 'lucide-react'
+import { Heart, Users, FileText, ChevronDown } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { CANDIDATE } from '@/lib/data/campaign'
 
@@ -43,10 +43,14 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md px-4 py-1.5 text-xs font-medium ring-1 ring-white/20"
+              className="inline-block"
             >
-              <Flag className="h-3.5 w-3.5 text-patriot-gold" />
-              <span>{CANDIDATE.party} · {CANDIDATE.constituency}</span>
+              <img
+                src="/declaration.jpg"
+                alt="Official Declaration — Emmanuel Senyo Amekplenu, Volta Regional Youth Organizer Hopeful"
+                className="max-h-48 sm:max-h-56 w-auto rounded-2xl shadow-premium-lg ring-1 ring-white/20 object-contain"
+                loading="eager"
+              />
             </motion.div>
 
             <motion.h1
@@ -55,8 +59,6 @@ export function HeroSection() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="mt-6 font-serif text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight"
             >
-              Leadership
-              <br />
               <span className="text-gradient-gold">Service. Excellence. Accountability.</span>
             </motion.h1>
 
