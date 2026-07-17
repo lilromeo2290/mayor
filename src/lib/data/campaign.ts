@@ -783,7 +783,6 @@ export const NAV_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Vision', href: '#vision' },
   { label: 'Manifesto', href: '#manifesto' },
-  { label: 'Projects', href: '#achievements' },
   { label: 'News', href: '#news' },
   { label: 'Gallery', href: '#gallery' },
   { label: 'Events', href: '#events' },
