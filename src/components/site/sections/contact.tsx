@@ -10,10 +10,6 @@ import {
   Send,
   Clock,
   Facebook,
-  Twitter,
-  Instagram,
-  Youtube,
-  Linkedin,
 } from 'lucide-react'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -37,10 +33,6 @@ const OFFICES = [
 
 const SOCIALS = [
   { icon: Facebook, href: '#', label: 'Facebook' },
-  { icon: Twitter, href: '#', label: 'Twitter / X' },
-  { icon: Instagram, href: '#', label: 'Instagram' },
-  { icon: Youtube, href: '#', label: 'YouTube' },
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
 ]
 
 export function ContactSection() {
