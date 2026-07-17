@@ -146,8 +146,7 @@ export const VISION_ITEMS: VisionItem[] = [
     title: 'Economic Development',
     short: 'A resilient, diversified economy that works for every region.',
     goals: [],
-    detail:
-      'We will rebuild our economy around a bold industrialisation agenda, deepening local value addition and integrating small businesses into regional supply chains. Our plan combines targeted tax incentives for manufacturers, a National SME Capital Fund, and modern special economic zones that attract sustainable foreign investment while protecting local enterprise.',
+    detail: '',
   },
   {
     icon: BookOpen,

@@ -92,7 +92,9 @@ export function VisionSection() {
                               </ul>
                             </>
                           )}
-                          <p className="text-sm text-muted-foreground leading-relaxed">{item.detail}</p>
+                          {item.detail && (
+                            <p className="text-sm text-muted-foreground leading-relaxed">{item.detail}</p>
+                          )}
                         </div>
                       </motion.div>
                     )}
