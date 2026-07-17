@@ -53,17 +53,12 @@ export function AchievementsSection() {
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          title={
-            <>
-              A Record of <span className="text-gradient-gold">Delivered Results</span>
-            </>
-          }
           description={
             <span className="text-white/80">
               Numbers don't lie. These are verified, audited outcomes delivered under Emmanuel Amekplenu's leadership over the past six years.
             </span>
           }
-          className="[&_h2]:text-white [&_p]:text-white/80"
+          className="[&_p]:text-white/80"
         />
 
         <div className="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
