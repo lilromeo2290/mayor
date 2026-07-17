@@ -24,7 +24,7 @@ export function AboutSection() {
           eyebrow="About the Candidate"
           title={
             <>
-              Meet <span className="text-gradient-gold">Hon. Alexander K. Mensah</span>
+              Meet <span className="text-gradient-gold">Emmanuel Senyo Amekplenu</span>
             </>
           }
           description="A seasoned public servant, accomplished economist, and devoted community leader with a 22-year record of integrity, competence, and service."

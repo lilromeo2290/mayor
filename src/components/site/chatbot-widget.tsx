@@ -21,7 +21,7 @@ const QUICK_PROMPTS = [
 function answer(q: string): string {
   const lower = q.toLowerCase()
   if (lower.includes('vote'))
-    return 'To vote for Alexander Mensah, you must be on the national electoral roll. Visit your district electoral office with a valid national ID before the registration deadline. Polling day is 7 December 2026. Want me to connect you to our voter helpline?'
+    return 'To vote for Emmanuel Amekplenu, you must be on the national electoral roll. Visit your district electoral office with a valid national ID before the registration deadline. Polling day is 7 December 2026. Want me to connect you to our voter helpline?'
   if (lower.includes('volunteer'))
     return 'Volunteering is easy! Scroll to the Volunteer section, complete the form, and our regional coordinator will reach out within 48 hours. We have roles for canvassing, phone banking, social media, logistics, healthcare outreach, and more.'
   if (lower.includes('donat') || lower.includes('donation') || lower.includes('money'))

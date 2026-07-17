@@ -48,7 +48,7 @@ export function TestimonialsSection() {
               Trusted by <span className="text-gradient-gold">People Like You</span>
             </>
           }
-          description="Community leaders, professionals, business owners, traditional rulers, and ordinary citizens share why they stand with Alexander Mensah."
+          description="Community leaders, professionals, business owners, traditional rulers, and ordinary citizens share why they stand with Emmanuel Amekplenu."
           className="[&_h2]:text-white [&_p]:text-white/80"
         />
 

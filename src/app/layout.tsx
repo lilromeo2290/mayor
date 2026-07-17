@@ -21,11 +21,12 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Hon. Alexander K. Mensah — Service. Excellence. Accountability.",
+  title: "Emmanuel Senyo Amekplenu — Service. Excellence. Accountability.",
   description:
-    "Official campaign website for Hon. Alexander K. Mensah. Building a better future together through unity, integrity, and development. Join the movement, volunteer, donate, and read our manifesto.",
+    "Official campaign website for Emmanuel Senyo Amekplenu, Volta Regional Youth Organizer Hopeful. Building a better future together through unity, integrity, and development. Join the movement, volunteer, donate, and read our manifesto.",
   keywords: [
-    "Alexander Mensah",
+    "Emmanuel Senyo Amekplenu",
+    "Emmanuel Amekplenu",
     "political campaign",
     "leadership",
     "manifesto",
@@ -36,18 +37,18 @@ export const metadata: Metadata = {
     "unity",
     "integrity",
   ],
-  authors: [{ name: "Mensah Campaign 2026" }],
+  authors: [{ name: "Amekplenu Campaign 2026" }],
   openGraph: {
-    title: "Hon. Alexander K. Mensah — Service. Excellence. Accountability.",
+    title: "Emmanuel Senyo Amekplenu — Service. Excellence. Accountability.",
     description:
       "Building a Better Future Together Through Unity, Integrity, and Development.",
-    siteName: "Mensah Campaign 2026",
+    siteName: "Amekplenu Campaign 2026",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hon. Alexander K. Mensah — Service. Excellence. Accountability.",
+    title: "Emmanuel Senyo Amekplenu — Service. Excellence. Accountability.",
     description:
       "Building a Better Future Together Through Unity, Integrity, and Development.",
   },
@@ -71,15 +72,15 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              name: "Hon. Alexander K. Mensah",
-              jobTitle: "Political Candidate",
+              name: "Emmanuel Senyo Amekplenu",
+              jobTitle: "Volta Regional Youth Organizer Hopeful",
               description:
-                "Candidate for national office. Building a better future through unity, integrity, and development.",
-              url: "https://mensah-campaign.example",
+                "Volta Regional Youth Organizer Hopeful. Building a better future for young people through unity, integrity, and development.",
+              url: "https://amekplenu-campaign.example",
               sameAs: [
-                "https://twitter.com/mensahcampaign",
-                "https://facebook.com/mensahcampaign",
-                "https://instagram.com/mensahcampaign",
+                "https://twitter.com/amekplenucamp",
+                "https://facebook.com/amekplenucamp",
+                "https://instagram.com/amekplenucamp",
               ],
             }),
           }}

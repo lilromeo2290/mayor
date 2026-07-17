@@ -61,7 +61,7 @@ export function AchievementsSection() {
           }
           description={
             <span className="text-white/80">
-              Numbers don’t lie. These are verified, audited outcomes delivered under Alexander Mensah’s leadership over the past six years.
+              Numbers don't lie. These are verified, audited outcomes delivered under Emmanuel Amekplenu's leadership over the past six years.
             </span>
           }
           className="[&_h2]:text-white [&_p]:text-white/80"

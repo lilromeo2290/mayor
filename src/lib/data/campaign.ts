@@ -25,17 +25,17 @@ import {
 } from 'lucide-react'
 
 export const CANDIDATE = {
-  name: 'Hon. Alexander K. Mensah',
-  shortName: 'Alexander Mensah',
-  title: 'Candidate for National Parliament',
+  name: 'Emmanuel Senyo Amekplenu',
+  shortName: 'Emmanuel Amekplenu',
+  title: 'Volta Regional Youth Organizer Hopeful',
   party: 'United Progressive Front',
   constituency: 'Central Region Constituency',
   slogan: 'Service. Excellence. Accountability.',
   tagline: 'Building a Better Future Together Through Unity, Integrity, and Development.',
   bio: [
-    'Hon. Alexander K. Mensah is a seasoned public servant, accomplished economist, and devoted community leader who has spent more than two decades championing policies that uplift ordinary citizens. Born and raised in the heartland of the Central Region, Alexander rose from humble beginnings to become one of the most respected voices in public finance and grassroots development. His career has been defined by a steady commitment to transparency, evidence-based policymaking, and the firm belief that every citizen deserves access to quality education, healthcare, and economic opportunity.',
-    'A former Deputy Minister of Finance and senior advisor to two administrations, Alexander has authored landmark reforms that expanded rural infrastructure, modernised public procurement, and unlocked billions in private investment. He is widely credited with designing the National Youth Skills Programme, which has trained over 80,000 young people, and for brokering the cross-party consensus that delivered the Universal Healthcare Access Act.',
-    'Beyond his policy work, Alexander is a devoted husband, father of three, and active member of his local church. He continues to mentor young leaders through the Mensah Civic Leadership Institute and remains a tireless advocate for ethical governance, accountable institutions, and a future in which no community is left behind.',
+    'Emmanuel Senyo Amekplenu is a passionate youth leader, organiser, and community advocate who has spent over a decade mobilising young people across the Volta Region. Born and raised in the heart of the region, Senyo rose through the ranks of student activism and grassroots organising to become one of the most respected youth voices in the movement. His work has been defined by a steady commitment to empowerment, transparency, and the firm belief that every young person deserves access to quality education, economic opportunity, and a seat at the decision-making table.',
+    'A former student union president and senior organiser for the party youth wing, Senyo has spearheaded countless grassroots mobilisation efforts that registered thousands of new young voters, established party youth clubs across every district in the Volta Region, and unlocked new opportunities for skills training and entrepreneurship. He is widely credited with revitalising dormant branches, brokering unity between rival factions, and championing the inclusion of more young people in decision-making structures at every level of the party.',
+    'Beyond his organising work, Senyo is a devoted husband, father, and active member of his local community. He continues to mentor young leaders through regional civic leadership forums and remains a tireless advocate for ethical leadership, accountable institutions, and a future in which no young person is left behind.',
   ],
   education: [
     {
@@ -425,7 +425,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   {
     id: 'n1',
     category: 'Campaign News',
-    title: 'Mensah Launches National Youth Skills Programme Phase III',
+    title: 'Amekplenu Launches National Youth Skills Programme Phase III',
     excerpt:
       'Speaking to a 30,000-strong crowd in Cape Coast, the candidate unveiled the next phase of his flagship skills programme, targeting 500,000 trainees per year.',
     date: '2026-07-12',
@@ -437,7 +437,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   {
     id: 'n2',
     category: 'Press Releases',
-    title: 'Mensah Pledges ₵500M Venture Fund for Young Entrepreneurs',
+    title: 'Amekplenu Pledges ₵500M Venture Fund for Young Entrepreneurs',
     excerpt:
       'The candidate today announced a ₵500 million Youth Venture Fund that will provide concessional capital and mentorship to young founders across the country.',
     date: '2026-07-09',
@@ -449,11 +449,11 @@ export const NEWS_ITEMS: NewsItem[] = [
   {
     id: 'n3',
     category: 'Speeches',
-    title: 'Full Text: Mensah’s Address at the National Governance Forum',
+    title: 'Full Text: Amekplenu’s Address at the National Governance Forum',
     excerpt:
       'Read the full transcript of the candidate’s landmark address on ethical governance, anti-corruption, and rebuilding public trust in our institutions.',
     date: '2026-07-05',
-    author: 'Hon. Alexander K. Mensah',
+    author: 'Emmanuel Senyo Amekplenu',
     readTime: '12 min read',
     image:
       'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80',
@@ -477,7 +477,7 @@ export const NEWS_ITEMS: NewsItem[] = [
     excerpt:
       'In this op-ed, the candidate argues that no development agenda can succeed without first fixing how public money is raised, spent, and accounted for.',
     date: '2026-06-28',
-    author: 'Hon. Alexander K. Mensah',
+    author: 'Emmanuel Senyo Amekplenu',
     readTime: '8 min read',
     image:
       'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80',
@@ -485,7 +485,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   {
     id: 'n6',
     category: 'Videos',
-    title: 'Watch: Mensah Visits Bolgatanga Regional Hospital',
+    title: 'Watch: Amekplenu Visits Bolgatanga Regional Hospital',
     excerpt:
       'A four-minute documentary on the candidate’s visit to the newly upgraded Bolgatanga Regional Hospital, the 47th hospital supported under his leadership.',
     date: '2026-06-22',
@@ -509,7 +509,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   {
     id: 'n8',
     category: 'Campaign News',
-    title: 'Mensah Welcomes 12,000 New Volunteers in Northern Tour',
+    title: 'Amekplenu Welcomes 12,000 New Volunteers in Northern Tour',
     excerpt:
       'A five-day northern regional tour saw 12,000 new volunteers join the movement, with packed town halls in Tamale, Bolgatanga, Wa, and Sunyani.',
     date: '2026-06-14',
@@ -568,7 +568,7 @@ export const EVENT_ITEMS: EventItem[] = [
   {
     id: 'e4',
     type: 'Fundraiser',
-    title: 'Business Leaders for Mensah Dinner',
+    title: 'Business Leaders for Amekplenu Dinner',
     date: '2026-11-08T18:30:00',
     time: '6:30 PM',
     location: 'Labadi Beach Hotel, Accra',
@@ -698,7 +698,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Community Leader',
     location: 'Central Region',
     quote:
-      'Alexander is the only leader who comes to our village, sits under the tree, and listens. When he promised us a clinic, he delivered. When he promised us a road, he delivered. We trust him with our future.',
+      'Senyo is the only leader who comes to our village, sits under the tree, and listens. When he promised us a clinic, he delivered. When he promised us a road, he delivered. We trust him with our future.',
     initials: 'NY',
   },
   {
@@ -714,7 +714,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Medical Professional',
     location: 'Greater Accra',
     quote:
-      'As a doctor, I have seen firsthand what the Universal Healthcare Access Act means. Alexander doesn’t just talk about health — he delivers the hospitals, the equipment, and the staff.',
+      'As a doctor, I have seen firsthand what real youth-led advocacy can mean. Senyo doesn’t just talk about health — he mobilises young volunteers to support our hospitals, supplies, and outreach.',
     initials: 'AS',
   },
   {
@@ -730,7 +730,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Business Owner',
     location: 'Eastern Region',
     quote:
-      'I have done business across this country for 30 years. I have never seen a finance minister as competent and as clean as Alexander. He understands the economy and he respects the law.',
+      'I have done business across this region for 30 years. I have never seen a youth organiser as competent and as principled as Senyo. He understands the economy and he respects the law.',
     initials: 'KA',
   },
   {
@@ -738,7 +738,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Traditional Leader',
     location: 'Volta Region',
     quote:
-      'In our tradition, we value wisdom, integrity, and service. Alexander embodies all three. He honours our customs and he delivers for our people. He has our full support.',
+      'In our tradition, we value wisdom, integrity, and service. Senyo embodies all three. He honours our customs and he delivers for our young people. He has our full support.',
     initials: 'TA',
   },
 ]
@@ -794,7 +794,7 @@ export const NAV_LINKS = [
 
 export const FAQ_ITEMS = [
   {
-    q: 'How can I vote for Alexander Mensah?',
+    q: 'How can I vote for Emmanuel Amekplenu?',
     a: 'You must be registered on the national electoral roll. Visit your district electoral office with a valid national ID before the registration deadline. Polling day is 7 December 2026. We can help you check your registration status — contact our hotline.',
   },
   {
