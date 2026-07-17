@@ -22,11 +22,11 @@ export function VisionSection() {
               A Vision for <span className="text-gradient-gold">Every Citizen</span>
             </>
           }
-          description="Twelve pillars that will define an Amekplenu administration — each grounded in evidence, designed for impact, and delivered with integrity. Tap any pillar to explore the detail."
+          description="Six pillars that will define an Amekplenu administration — each grounded in evidence, designed for impact, and delivered with integrity. Tap any pillar to explore the detail."
         />
 
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {VISION_ITEMS.map((item, i) => {
+          {VISION_ITEMS.slice(0, 6).map((item, i) => {
             const isOpen = open === i
             const Icon = item.icon
             return (
