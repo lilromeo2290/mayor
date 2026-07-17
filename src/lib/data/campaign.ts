@@ -662,6 +662,38 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     src: '/gallery-8.jpg',
     span: 'wide',
   },
+  {
+    id: 'g9',
+    category: 'Campaign Highlights',
+    title: 'Building Together',
+    type: 'image',
+    src: '/gallery-9.jpg',
+    span: 'normal',
+  },
+  {
+    id: 'g10',
+    category: 'Campaign Highlights',
+    title: 'A Future in Focus',
+    type: 'image',
+    src: '/gallery-10.jpg',
+    span: 'tall',
+  },
+  {
+    id: 'g11',
+    category: 'Campaign Highlights',
+    title: 'The Declaration',
+    type: 'image',
+    src: '/gallery-11.jpg',
+    span: 'wide',
+  },
+  {
+    id: 'g12',
+    category: 'Campaign Highlights',
+    title: 'With the People',
+    type: 'image',
+    src: '/gallery-12.jpg',
+    span: 'wide',
+  },
 ]
 
 export type Testimonial = {
