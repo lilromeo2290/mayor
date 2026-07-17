@@ -59,13 +59,13 @@ export function NewsSection() {
           ))}
         </div>
 
-        {/* Featured (first item) */}
+        {/* Featured (first item) + 2 secondary items = 3 total */}
         <div className="mt-12 grid lg:grid-cols-2 gap-6">
           {filtered[0] && <FeaturedNewsCard item={filtered[0]} />}
 
           {/* List of secondary items */}
           <div className="grid sm:grid-cols-2 gap-5">
-            {filtered.slice(1, 5).map((item, i) => (
+            {filtered.slice(1, 3).map((item, i) => (
               <motion.div
                 key={item.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -78,23 +78,6 @@ export function NewsSection() {
             ))}
           </div>
         </div>
-
-        {/* Remaining items grid */}
-        {filtered.length > 5 && (
-          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {filtered.slice(5).map((item, i) => (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
-                transition={{ duration: 0.4, delay: i * 0.05 }}
-              >
-                <CompactNewsCard item={item} />
-              </motion.div>
-            ))}
-          </div>
-        )}
 
         {filtered.length === 0 && (
           <p className="text-center py-12 text-muted-foreground">
