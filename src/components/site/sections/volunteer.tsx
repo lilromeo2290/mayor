@@ -76,10 +76,7 @@ export function VolunteerSection() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-5 lg:sticky lg:top-28"
           >
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
-              Become a <span className="text-gradient-gold">Volunteer</span>
-            </h2>
-            <p className="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
               This is a people-powered campaign. Across 312 constituencies, 50,000 volunteers are knocking on doors, making calls, and organising their communities. Your skills, your time, and your voice can make the difference.
             </p>
 
