@@ -103,11 +103,6 @@ export function AchievementsSection() {
                 className="h-full gradient-gold rounded-full"
               />
             </div>
-            <div className="mt-3 grid grid-cols-3 gap-2 text-xs text-white/60">
-              <span>167 promises kept</span>
-              <span className="text-center">52 in progress</span>
-              <span className="text-right">31 scheduled</span>
-            </div>
           </Card>
         </motion.div>
       </div>
