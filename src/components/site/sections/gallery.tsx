@@ -9,7 +9,7 @@ import { SectionHeading } from '@/components/site/section-heading'
 import { GALLERY_ITEMS, type GalleryItem } from '@/lib/data/campaign'
 import { cn } from '@/lib/utils'
 
-const CATEGORIES = ['All', 'Rallies', 'Community Outreach', 'Press Conferences', 'Campaign Highlights'] as const
+const CATEGORIES = ['All', 'Filling of Nomination Form'] as const
 
 export function GallerySection() {
   const [active, setActive] = React.useState<(typeof CATEGORIES)[number]>('All')

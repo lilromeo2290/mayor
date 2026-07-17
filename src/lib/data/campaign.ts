@@ -600,7 +600,7 @@ export type GalleryItem = {
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'g1',
-    category: 'Campaign Highlights',
+    category: 'Filling of Nomination Form',
     title: 'On the Campaign Trail',
     type: 'image',
     src: '/gallery-1.jpg',
@@ -608,7 +608,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: 'g2',
-    category: 'Campaign Highlights',
+    category: 'Filling of Nomination Form',
     title: 'With Supporters',
     type: 'image',
     src: '/gallery-2.jpg',
@@ -616,7 +616,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: 'g3',
-    category: 'Campaign Highlights',
+    category: 'Filling of Nomination Form',
     title: 'Community Engagement',
     type: 'image',
     src: '/gallery-3.jpg',
@@ -624,7 +624,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: 'g4',
-    category: 'Campaign Highlights',
+    category: 'Filling of Nomination Form',
     title: 'On the Ground',
     type: 'image',
     src: '/gallery-4.jpg',
@@ -632,7 +632,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: 'g5',
-    category: 'Campaign Highlights',
+    category: 'Filling of Nomination Form',
     title: 'Meeting the People',
     type: 'image',
     src: '/gallery-5.jpg',
@@ -640,7 +640,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: 'g6',
-    category: 'Campaign Highlights',
+    category: 'Filling of Nomination Form',
     title: 'Campaign Moment',
     type: 'image',
     src: '/gallery-6.jpg',
@@ -648,7 +648,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: 'g7',
-    category: 'Campaign Highlights',
+    category: 'Filling of Nomination Form',
     title: 'A Movement Grows',
     type: 'image',
     src: '/gallery-7.jpg',
@@ -656,7 +656,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: 'g8',
-    category: 'Campaign Highlights',
+    category: 'Filling of Nomination Form',
     title: 'Voices Heard',
     type: 'image',
     src: '/gallery-8.jpg',
@@ -664,7 +664,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: 'g9',
-    category: 'Campaign Highlights',
+    category: 'Filling of Nomination Form',
     title: 'Building Together',
     type: 'image',
     src: '/gallery-9.jpg',
@@ -672,7 +672,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: 'g10',
-    category: 'Campaign Highlights',
+    category: 'Filling of Nomination Form',
     title: 'A Future in Focus',
     type: 'image',
     src: '/gallery-10.jpg',
@@ -680,7 +680,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: 'g11',
-    category: 'Campaign Highlights',
+    category: 'Filling of Nomination Form',
     title: 'The Declaration',
     type: 'image',
     src: '/gallery-11.jpg',
@@ -688,7 +688,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: 'g12',
-    category: 'Campaign Highlights',
+    category: 'Filling of Nomination Form',
     title: 'With the People',
     type: 'image',
     src: '/gallery-12.jpg',
