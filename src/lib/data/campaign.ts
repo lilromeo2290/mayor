@@ -28,7 +28,7 @@ export const CANDIDATE = {
   name: 'Emmanuel Senyo Amekplenu',
   shortName: 'Emmanuel Amekplenu',
   title: 'Volta Regional Youth Organizer Hopeful',
-  party: 'United Progressive Front',
+  party: 'New Patriotic Party',
   constituency: 'Central Region Constituency',
   slogan: 'Service. Excellence. Accountability.',
   tagline: 'Building a Better Future Together Through Unity, Integrity, and Development.',
