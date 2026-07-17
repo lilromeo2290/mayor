@@ -33,7 +33,7 @@ export function ManifestoSection() {
         />
 
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {MANIFESTO_ITEMS.map((item, i) => {
+          {MANIFESTO_ITEMS.slice(0, 6).map((item, i) => {
             const Icon = item.icon
             return (
               <motion.div
@@ -79,7 +79,7 @@ export function ManifestoSection() {
 
                   <div className="mt-5 pt-4 border-t border-border flex items-center justify-between">
                     <Badge variant="outline" className="text-xs font-medium">
-                      Commitment {i + 1} of {MANIFESTO_ITEMS.length}
+                      Commitment {i + 1} of 6
                     </Badge>
                     <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:text-patriot-red group-hover:rotate-12 transition-all" />
                   </div>
