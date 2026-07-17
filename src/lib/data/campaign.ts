@@ -145,7 +145,7 @@ export const VISION_ITEMS: VisionItem[] = [
     icon: TrendingUp,
     title: 'Economic Development',
     short: 'A resilient, diversified economy that works for every region.',
-    goals: ['7% annual GDP growth', '1.2M new jobs by 2030', 'Triple non-traditional exports'],
+    goals: [],
     detail:
       'We will rebuild our economy around a bold industrialisation agenda, deepening local value addition and integrating small businesses into regional supply chains. Our plan combines targeted tax incentives for manufacturers, a National SME Capital Fund, and modern special economic zones that attract sustainable foreign investment while protecting local enterprise.',
   },

@@ -76,18 +76,22 @@ export function VisionSection() {
                         className="overflow-hidden"
                       >
                         <div className="pt-5 mt-5 border-t border-border">
-                          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-patriot-red mb-3">
-                            <Target className="h-3.5 w-3.5" />
-                            Key Goals
-                          </div>
-                          <ul className="space-y-2 mb-4">
-                            {item.goals.map((g) => (
-                              <li key={g} className="flex items-start gap-2 text-sm">
-                                <span className="h-1.5 w-1.5 rounded-full bg-patriot-gold mt-1.5 flex-shrink-0" />
-                                <span className="text-foreground/80">{g}</span>
-                              </li>
-                            ))}
-                          </ul>
+                          {item.goals.length > 0 && (
+                            <>
+                              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-patriot-red mb-3">
+                                <Target className="h-3.5 w-3.5" />
+                                Key Goals
+                              </div>
+                              <ul className="space-y-2 mb-4">
+                                {item.goals.map((g) => (
+                                  <li key={g} className="flex items-start gap-2 text-sm">
+                                    <span className="h-1.5 w-1.5 rounded-full bg-patriot-gold mt-1.5 flex-shrink-0" />
+                                    <span className="text-foreground/80">{g}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </>
+                          )}
                           <p className="text-sm text-muted-foreground leading-relaxed">{item.detail}</p>
                         </div>
                       </motion.div>
