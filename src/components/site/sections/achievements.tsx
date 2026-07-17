@@ -53,7 +53,6 @@ export function AchievementsSection() {
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Proven Results"
           title={
             <>
               A Record of <span className="text-gradient-gold">Delivered Results</span>
