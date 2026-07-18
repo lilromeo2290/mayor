@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { Heart, Users, FileText, ChevronDown } from 'lucide-react'
+import { Users, FileText, ChevronDown } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { CANDIDATE } from '@/lib/data/campaign'
 
@@ -67,12 +67,6 @@ export function HeroSection() {
                 <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 hover:text-white">
                   <Users className="mr-2 h-4 w-4" />
                   RTI Advocacy
-                </Button>
-              </a>
-              <a href="#donate">
-                <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 hover:text-white">
-                  <Heart className="mr-2 h-4 w-4" />
-                  Donate
                 </Button>
               </a>
               <a href="#manifesto">

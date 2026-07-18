@@ -144,12 +144,6 @@ export function SiteNav() {
                 </Button>
               )}
 
-              <a href="#donate" className="hidden md:inline-flex">
-                <Button className="bg-patriot-red hover:bg-patriot-red/90 text-white shadow-premium">
-                  Donate
-                </Button>
-              </a>
-
               {/* Mobile menu */}
               <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
                 <SheetTrigger asChild>
@@ -210,13 +204,6 @@ export function SiteNav() {
                         <SheetClose asChild>
                           <Button variant="outline" className="w-full">
                             Join RTI Advocacy
-                          </Button>
-                        </SheetClose>
-                      </a>
-                      <a href="#donate" className="block">
-                        <SheetClose asChild>
-                          <Button className="w-full bg-patriot-red hover:bg-patriot-red/90 text-white">
-                            Donate Now
                           </Button>
                         </SheetClose>
                       </a>
