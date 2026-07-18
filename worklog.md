@@ -320,4 +320,16 @@ Commit: cdb26f3
     (▸ Requested Information, Responses Received), Resources (▸ Gallery,
     Videos), Contact.
 
+Commit: bc54a7a
+
+---
+## 2026-07-19 — Update hero badge: 22+ Years -> 10+ Years
+
+- Agent: main
+- Files changed:
+  - `src/components/site/sections/hero.tsx`
+- Summary:
+  - Floating badge on the candidate portrait (top-right) updated from
+    "22+ Years / In Public Service" to "10+ Years / In Public Service".
+
 Commit: pending

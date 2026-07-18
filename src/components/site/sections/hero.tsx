@@ -119,7 +119,7 @@ export function HeroSection() {
                 <div className="text-[10px] uppercase tracking-widest text-patriot-gold font-semibold">
                   Trusted Leader
                 </div>
-                <div className="font-serif text-xl font-bold mt-1">22+ Years</div>
+                <div className="font-serif text-xl font-bold mt-1">10+ Years</div>
                 <div className="text-xs text-white/70">In Public Service</div>
               </motion.div>
             </div>
