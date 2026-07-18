@@ -22,6 +22,11 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "Emmanuel Senyo Amekplenu — Service. Excellence. Accountability.",
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
   description:
     "Official campaign website for Emmanuel Senyo Amekplenu, Volta Regional Youth Organizer Hopeful. Building a better future together through unity, integrity, and development. Join the movement, volunteer, donate, and read our manifesto.",
   keywords: [

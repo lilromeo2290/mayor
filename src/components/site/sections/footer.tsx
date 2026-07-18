@@ -107,8 +107,12 @@ export function SiteFooter() {
           {/* Brand */}
           <div className="lg:col-span-4">
             <div className="flex items-center gap-3">
-              <div className="h-12 w-12 rounded-full bg-white/10 ring-2 ring-patriot-gold/40 flex items-center justify-center">
-                <span className="font-serif text-xl font-bold text-patriot-gold">M</span>
+              <div className="h-14 w-14 rounded-full bg-white/10 ring-2 ring-patriot-gold/40 overflow-hidden flex items-center justify-center">
+                <img
+                  src="/logo.png"
+                  alt={`${CANDIDATE.shortName} — logo`}
+                  className="h-full w-full object-cover"
+                />
               </div>
               <div>
                 <div className="font-serif text-lg font-bold">{CANDIDATE.shortName}</div>

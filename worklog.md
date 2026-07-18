@@ -332,4 +332,27 @@ Commit: bc54a7a
   - Floating badge on the candidate portrait (top-right) updated from
     "22+ Years / In Public Service" to "10+ Years / In Public Service".
 
+Commit: 5c24644
+
+---
+## 2026-07-19 — Use uploaded logo.png as site logo
+
+- Agent: main
+- Files changed:
+  - `public/logo.png` (new)
+  - `src/components/site/site-nav.tsx`
+  - `src/components/site/sections/footer.tsx`
+  - `src/app/layout.tsx`
+- Summary:
+  - Copied `logo.png` from `/upload/` to `/public/logo.png`.
+  - Header brand: replaced the navy circle with gold "M" monogram with a
+    circular image badge containing the new logo. Size slightly increased
+    to 12×12 (mobile) / 14×14 (sm+) so the logo reads cleanly. Gold ring
+    kept as a frame, with hover ring brightening.
+  - Footer brand: same swap — replaced the "M" monogram with the logo
+    image inside a 14×14 circular badge.
+  - Favicon: added `icons` config in metadata pointing `/logo.png` to
+    icon, shortcut, and apple icon entries so the logo also appears in
+    browser tabs and on iOS home screens.
+
 Commit: pending

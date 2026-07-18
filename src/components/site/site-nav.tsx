@@ -53,9 +53,12 @@ export function SiteNav() {
           <div className="flex h-20 items-center justify-between gap-4">
             {/* Brand */}
             <a href="#home" className="flex items-center gap-3 group">
-              <div className="relative h-11 w-11 rounded-full bg-patriot-navy flex items-center justify-center shadow-premium">
-                <span className="font-serif text-xl font-bold text-patriot-gold">M</span>
-                <span className="absolute inset-0 rounded-full border-2 border-patriot-gold/40 group-hover:border-patriot-gold transition-colors" />
+              <div className="relative h-12 w-12 sm:h-14 sm:w-14 rounded-full overflow-hidden flex items-center justify-center shadow-premium ring-2 ring-patriot-gold/40 group-hover:ring-patriot-gold transition-all">
+                <img
+                  src="/logo.png"
+                  alt={`${CANDIDATE.shortName} — logo`}
+                  className="h-full w-full object-cover"
+                />
               </div>
               <div className="hidden sm:block leading-tight">
                 <div
