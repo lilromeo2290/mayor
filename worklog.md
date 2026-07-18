@@ -161,3 +161,26 @@ Append new entries below this line using the format:
 
 Commit: <commit hash or "pending">
 ```
+
+---
+## 2026-07-19 — Add RTI Advocacy menu and section
+
+- Agent: main
+- Files changed:
+  - `src/components/site/sections/rti-advocacy.tsx` (new)
+  - `src/app/page.tsx`
+  - `src/lib/data/campaign.ts`
+- Summary:
+  - Created a new `RtiAdvocacySection` component with six advocacy pillars
+    (Transparency in Governance, Simplified Information Requests,
+    Whistleblower Protection, Civic Education & Awareness, Youth-Led
+    Accountability Clubs, Stronger Enforcement) plus a CTA card inviting
+    supporters to become RTI Champions.
+  - Added `<RtiAdvocacySection />` to the page flow between Gallery and
+    Testimonials.
+  - Added `RTI Advocacy` entry to `NAV_LINKS` (placed after Gallery, before
+    Events) — links to `#rti`.
+- Section styling matches the existing premium look (NPP navy/red gradients,
+    gold accents, patriot-cream background, SectionHeading, motion reveal).
+
+Commit: pending

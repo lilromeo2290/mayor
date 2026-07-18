@@ -797,6 +797,7 @@ export const NAV_LINKS = [
   { label: 'Manifesto', href: '#manifesto' },
   { label: 'News', href: '#news' },
   { label: 'Gallery', href: '#gallery' },
+  { label: 'RTI Advocacy', href: '#rti' },
   { label: 'Events', href: '#events' },
   { label: 'Volunteer', href: '#volunteer' },
   { label: 'Donate', href: '#donate' },
