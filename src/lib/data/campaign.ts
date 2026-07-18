@@ -796,6 +796,11 @@ export type NavLink = {
   children?: { label: string; href: string }[]
 }
 
+// Access code required to view the "Responses Received" RTI section.
+// Change this value to rotate the code; existing visitors will need to
+// re-enter the new code on their next visit.
+export const RTI_RESPONSES_ACCESS_CODE = 'amekplenu2026'
+
 export const NAV_LINKS: NavLink[] = [
   { label: 'Home', href: '#home' },
   {

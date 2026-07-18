@@ -355,4 +355,37 @@ Commit: 5c24644
     icon, shortcut, and apple icon entries so the logo also appears in
     browser tabs and on iOS home screens.
 
+Commit: f701da4
+
+---
+## 2026-07-19 — Passcode-gate the Responses Received section
+
+- Agent: main
+- Files changed:
+  - `src/lib/data/campaign.ts`
+  - `src/components/site/sections/rti-tracker.tsx`
+- Summary:
+  - Added `RTI_RESPONSES_ACCESS_CODE` constant to `campaign.ts` (default
+    value: `amekplenu2026`). Change this string to rotate the code.
+  - Added a new `ResponsesGate` sub-component in `rti-tracker.tsx`:
+    - Lock + key icon header, "Access Restricted" title, explainer copy.
+    - Password input with show/hide toggle (eye icon).
+    - "Unlock Section" submit button; on incorrect code, shows red
+      "Incorrect access code" error inline.
+    - On correct code: persists unlock to `localStorage` under key
+      `rti-responses-unlocked` so returning visitors don't re-enter.
+  - The Responses Received section is now wrapped: when locked, the
+    gate card is shown; when unlocked, the existing responses list
+    (or empty-state card) is shown.
+  - Section title now appends a red "Locked" badge with lock icon when
+    locked. Description also swaps to a locked-state message.
+  - The "Responses Received" submenu link still works — it scrolls to
+    `#rti-responses`, where the locked card is now shown instead of the
+    responses list.
+  - Note: this is a client-side gate (not cryptographic security). It
+    hides the section from casual viewing and protects against the
+    average visitor, but a determined user could inspect the JS bundle.
+    For real secrecy, responses should also be omitted from the bundle
+    until the code is verified server-side.
+
 Commit: pending

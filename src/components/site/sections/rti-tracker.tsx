@@ -10,11 +10,18 @@ import {
   Calendar,
   ExternalLink,
   Inbox,
+  Lock,
+  KeyRound,
+  ShieldAlert,
+  Eye,
+  EyeOff,
 } from 'lucide-react'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
 import { SectionHeading } from '@/components/site/section-heading'
+import { RTI_RESPONSES_ACCESS_CODE } from '@/lib/data/campaign'
 
 export type RtiRequest = {
   id: string
@@ -46,7 +53,115 @@ const STATUS_STYLES: Record<RtiRequest['status'], string> = {
   Overdue: 'bg-red-100 text-red-800 dark:bg-red-900/40 dark:text-red-300',
 }
 
+const RESPONSES_UNLOCK_KEY = 'rti-responses-unlocked'
+
+function ResponsesGate({ onUnlock }: { onUnlock: () => void }) {
+  const [code, setCode] = React.useState('')
+  const [showCode, setShowCode] = React.useState(false)
+  const [error, setError] = React.useState<string | null>(null)
+  const [submitting, setSubmitting] = React.useState(false)
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    setSubmitting(true)
+    setError(null)
+    // Small artificial delay so the lock state feels deliberate.
+    setTimeout(() => {
+      if (code.trim() === RTI_RESPONSES_ACCESS_CODE) {
+        try {
+          localStorage.setItem(RESPONSES_UNLOCK_KEY, '1')
+        } catch {
+          // localStorage may be unavailable (private mode); ignore.
+        }
+        onUnlock()
+      } else {
+        setError('Incorrect access code. Please try again.')
+      }
+      setSubmitting(false)
+    }, 250)
+  }
+
+  return (
+    <div className="mt-12 max-w-lg mx-auto">
+      <Card className="p-8 sm:p-10 shadow-premium-lg">
+        <div className="flex flex-col items-center text-center">
+          <div className="relative">
+            <div className="mx-auto inline-flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-patriot-navy to-patriot-red text-patriot-gold shadow-premium">
+              <Lock className="h-7 w-7" />
+            </div>
+            <div className="absolute -top-1 -right-1 h-6 w-6 rounded-full bg-patriot-gold flex items-center justify-center">
+              <KeyRound className="h-3 w-3 text-patriot-navy" />
+            </div>
+          </div>
+          <h3 className="mt-5 font-serif text-2xl font-bold text-foreground">
+            Access Restricted
+          </h3>
+          <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+            This section contains agency responses to our information
+            requests. An access code is required to view the contents.
+            Contact the campaign team to request a code.
+          </p>
+        </div>
+
+        <form onSubmit={handleSubmit} className="mt-6 space-y-3">
+          <div className="relative">
+            <Input
+              type={showCode ? 'text' : 'password'}
+              value={code}
+              onChange={(e) => {
+                setCode(e.target.value)
+                if (error) setError(null)
+              }}
+              placeholder="Enter access code"
+              autoFocus
+              disabled={submitting}
+              className="pr-10"
+            />
+            <button
+              type="button"
+              onClick={() => setShowCode((s) => !s)}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+              aria-label={showCode ? 'Hide code' : 'Show code'}
+              tabIndex={-1}
+            >
+              {showCode ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+            </button>
+          </div>
+
+          {error && (
+            <div className="flex items-center gap-2 text-sm text-red-600 dark:text-red-400">
+              <ShieldAlert className="h-4 w-4 flex-shrink-0" />
+              <span>{error}</span>
+            </div>
+          )}
+
+          <Button
+            type="submit"
+            disabled={submitting || !code.trim()}
+            className="w-full bg-patriot-navy hover:bg-patriot-navy/90 text-white"
+          >
+            <Lock className="h-4 w-4 mr-2" />
+            {submitting ? 'Verifying…' : 'Unlock Section'}
+          </Button>
+        </form>
+      </Card>
+    </div>
+  )
+}
+
 export function RtiTrackerSection() {
+  const [responsesUnlocked, setResponsesUnlocked] = React.useState(false)
+
+  React.useEffect(() => {
+    try {
+      if (localStorage.getItem(RESPONSES_UNLOCK_KEY) === '1') {
+        setResponsesUnlocked(true)
+      }
+    } catch {
+      // localStorage unavailable; default to locked.
+    }
+  }, [])
+
   return (
     <>
       {/* Requested Information */}
@@ -138,13 +253,25 @@ export function RtiTrackerSection() {
             eyebrow="RTI Advocacy"
             title={
               <>
-                Responses <span className="text-gradient-gold">Received</span>
+                Responses <span className="text-gradient-gold">Received</span>{' '}
+                {!responsesUnlocked && (
+                  <span className="inline-flex items-center gap-1 align-middle text-sm font-semibold text-patriot-red">
+                    <Lock className="h-4 w-4" />
+                    Locked
+                  </span>
+                )}
               </>
             }
-            description="When an agency replies, the response is published here in full — including any documents, summaries, and the time taken between request and reply."
+            description={
+              responsesUnlocked
+                ? 'When an agency replies, the response is published here in full — including any documents, summaries, and the time taken between request and reply.'
+                : 'This section is restricted. Enter the access code below to view published agency responses.'
+            }
           />
 
-          {RTI_RESPONSES.length > 0 ? (
+          {!responsesUnlocked ? (
+            <ResponsesGate onUnlock={() => setResponsesUnlocked(true)} />
+          ) : RTI_RESPONSES.length > 0 ? (
             <div className="mt-12 grid gap-4">
               {RTI_RESPONSES.map((r, i) => (
                 <motion.div
