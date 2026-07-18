@@ -433,4 +433,25 @@ Commit: eb24d30
   - Lets visitors without a code self-route to the contact section
     instead of being stuck on the locked card.
 
+Commit: a62864c
+
+---
+## 2026-07-19 — Rebrand Volunteer CTAs to RTI Advocacy
+
+- Agent: main
+- Files changed:
+  - `src/components/site/sections/hero.tsx`
+  - `src/components/site/site-nav.tsx`
+- Summary:
+  - Hero CTA button: "Volunteer" → "RTI Advocacy"; link `#volunteer` →
+    `#rti`. Kept the Users icon.
+  - Mobile drawer CTA: "Join as Volunteer" → "Join RTI Advocacy"; link
+    `#volunteer` → `#rti`.
+  - Both buttons now route visitors to the RTI Advocacy section instead
+    of the Volunteer form.
+  - The Volunteer section itself (with its signup form at `#volunteer`)
+    remains on the page unchanged. The "Become an RTI Champion" button
+    inside the RTI Advocacy section still links to `#volunteer` (the
+    form), so visitors who want to sign up can still do so.
+
 Commit: pending

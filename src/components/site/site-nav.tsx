@@ -206,10 +206,10 @@ export function SiteNav() {
                       ))}
                     </nav>
                     <div className="border-t border-border p-6 space-y-3">
-                      <a href="#volunteer" className="block">
+                      <a href="#rti" className="block">
                         <SheetClose asChild>
                           <Button variant="outline" className="w-full">
-                            Join as Volunteer
+                            Join RTI Advocacy
                           </Button>
                         </SheetClose>
                       </a>

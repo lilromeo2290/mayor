@@ -63,10 +63,10 @@ export function HeroSection() {
               transition={{ duration: 0.7, delay: 0.3 }}
               className="mt-9 flex flex-wrap gap-3"
             >
-              <a href="#volunteer">
+              <a href="#rti">
                 <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 hover:text-white">
                   <Users className="mr-2 h-4 w-4" />
-                  Volunteer
+                  RTI Advocacy
                 </Button>
               </a>
               <a href="#donate">
