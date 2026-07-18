@@ -273,4 +273,35 @@ Commit: 1ff8dbe
   - Top-level menu now: Home, About (▸ Vision), Manifesto, News, RTI
     Advocacy, Resources (▸ Gallery, Videos), Volunteer, Contact.
 
+Commit: 0afeb5a
+
+---
+## 2026-07-19 — Add RTI Advocacy submenus (Requested Information, Responses Received)
+
+- Agent: main
+- Files changed:
+  - `src/lib/data/campaign.ts`
+  - `src/components/site/sections/rti-tracker.tsx` (new)
+  - `src/app/page.tsx`
+- Summary:
+  - Added `children` to the RTI Advocacy nav entry:
+    - Requested Information → `#rti-requests`
+    - Responses Received → `#rti-responses`
+  - Created a new `RtiTrackerSection` component exporting two sections:
+    1. **Requested Information** (`#rti-requests`) — list of RTI requests
+       filed by the campaign. Each card shows title, status badge
+       (Pending / Acknowledged / Response Received / Overdue), summary,
+       agency, and date filed. Empty-state shown when no requests exist.
+    2. **Responses Received** (`#rti-responses`) — list of agency replies.
+       Each card shows title, "Response Received" badge, summary, agency,
+       date received, and optional "View Document" button linking to the
+       response file. Empty-state shown when no responses exist.
+  - Added `<RtiTrackerSection />` to the page flow right after
+    `<RtiAdvocacySection />`.
+  - `RTI_REQUESTS` and `RTI_RESPONSES` arrays are intentionally empty —
+    user can supply entries to populate the tracker.
+  - Top-level menu: Home, About (▸ Vision), Manifesto, News, RTI Advocacy
+    (▸ Requested Information, Responses Received), Resources (▸ Gallery,
+    Videos), Volunteer, Contact.
+
 Commit: pending

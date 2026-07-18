@@ -805,7 +805,14 @@ export const NAV_LINKS: NavLink[] = [
   },
   { label: 'Manifesto', href: '#manifesto' },
   { label: 'News', href: '#news' },
-  { label: 'RTI Advocacy', href: '#rti' },
+  {
+    label: 'RTI Advocacy',
+    href: '#rti',
+    children: [
+      { label: 'Requested Information', href: '#rti-requests' },
+      { label: 'Responses Received', href: '#rti-responses' },
+    ],
+  },
   {
     label: 'Resources',
     href: '#gallery',
