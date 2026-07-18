@@ -183,4 +183,23 @@ Commit: <commit hash or "pending">
 - Section styling matches the existing premium look (NPP navy/red gradients,
     gold accents, patriot-cream background, SectionHeading, motion reveal).
 
+Commit: e8901c1
+
+---
+## 2026-07-19 — Vision as submenu under About
+
+- Agent: main
+- Files changed:
+  - `src/lib/data/campaign.ts`
+  - `src/components/site/site-nav.tsx`
+- Summary:
+  - Extended `NAV_LINKS` data type with optional `children` array, and moved
+    Vision into About's children (no longer a top-level link).
+  - Desktop nav: items with children now render with a chevron indicator and
+    a hover-triggered dropdown panel containing the child links.
+  - Mobile drawer: items with children render the parent link followed by
+    nested child links indented under a left border.
+  - Top-level menu now: Home, About (▸ Vision), Manifesto, News, Gallery,
+    RTI Advocacy, Events, Volunteer, Donate, Contact.
+
 Commit: pending

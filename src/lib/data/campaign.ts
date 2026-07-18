@@ -790,10 +790,19 @@ export const VOLUNTEER_INTERESTS = [
   'Policy research',
 ]
 
-export const NAV_LINKS = [
+export type NavLink = {
+  label: string
+  href: string
+  children?: { label: string; href: string }[]
+}
+
+export const NAV_LINKS: NavLink[] = [
   { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Vision', href: '#vision' },
+  {
+    label: 'About',
+    href: '#about',
+    children: [{ label: 'Vision', href: '#vision' }],
+  },
   { label: 'Manifesto', href: '#manifesto' },
   { label: 'News', href: '#news' },
   { label: 'Gallery', href: '#gallery' },

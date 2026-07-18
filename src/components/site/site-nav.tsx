@@ -74,15 +74,40 @@ export function SiteNav() {
 
             {/* Desktop nav */}
             <nav className="hidden xl:flex items-center gap-1">
-              {NAV_LINKS.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="px-3 py-2 text-[15px] font-bold text-foreground/85 hover:text-patriot-red transition-colors rounded-md hover:bg-muted/60"
-                >
-                  {link.label}
-                </a>
-              ))}
+              {NAV_LINKS.map((link) =>
+                link.children && link.children.length > 0 ? (
+                  <div key={link.href} className="group relative">
+                    <a
+                      href={link.href}
+                      className="inline-flex items-center gap-1 px-3 py-2 text-[15px] font-bold text-foreground/85 hover:text-patriot-red transition-colors rounded-md hover:bg-muted/60"
+                    >
+                      {link.label}
+                      <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
+                    </a>
+                    <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                      <div className="min-w-[200px] rounded-xl border border-border bg-popover shadow-premium-lg p-1.5">
+                        {link.children.map((child) => (
+                          <a
+                            key={child.href}
+                            href={child.href}
+                            className="block px-3 py-2 text-sm font-semibold text-foreground/80 hover:text-patriot-red hover:bg-muted rounded-md transition-colors"
+                          >
+                            {child.label}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="px-3 py-2 text-[15px] font-bold text-foreground/85 hover:text-patriot-red transition-colors rounded-md hover:bg-muted/60"
+                  >
+                    {link.label}
+                  </a>
+                )
+              )}
             </nav>
 
             {/* Right cluster */}
@@ -148,15 +173,33 @@ export function SiteNav() {
                     </div>
                     <nav className="flex-1 overflow-y-auto px-6 py-4 space-y-1">
                       {NAV_LINKS.map((link) => (
-                        <SheetClose asChild key={link.href}>
-                          <a
-                            href={link.href}
-                            className="flex items-center justify-between rounded-lg px-3 py-3 text-base font-bold text-foreground hover:bg-muted transition-colors"
-                          >
-                            {link.label}
-                            <ChevronDown className="h-4 w-4 -rotate-90 text-muted-foreground" />
-                          </a>
-                        </SheetClose>
+                        <div key={link.href}>
+                          <SheetClose asChild>
+                            <a
+                              href={link.href}
+                              className="flex items-center justify-between rounded-lg px-3 py-3 text-base font-bold text-foreground hover:bg-muted transition-colors"
+                            >
+                              {link.label}
+                              {link.children && link.children.length > 0 && (
+                                <ChevronDown className="h-4 w-4 -rotate-90 text-muted-foreground" />
+                              )}
+                            </a>
+                          </SheetClose>
+                          {link.children && link.children.length > 0 && (
+                            <div className="ml-4 mt-1 space-y-1 border-l border-border pl-3">
+                              {link.children.map((child) => (
+                                <SheetClose asChild key={child.href}>
+                                  <a
+                                    href={child.href}
+                                    className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-foreground/75 hover:text-patriot-red hover:bg-muted transition-colors"
+                                  >
+                                    {child.label}
+                                  </a>
+                                </SheetClose>
+                              ))}
+                            </div>
+                          )}
+                        </div>
                       ))}
                     </nav>
                     <div className="border-t border-border p-6 space-y-3">
