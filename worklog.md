@@ -215,4 +215,19 @@ Commit: d0a46c0
     `#events` (the events section id is unchanged); only the visible label
     in the desktop nav and mobile drawer is renamed.
 
+Commit: 847070a
+
+---
+## 2026-07-19 — Move Gallery under Resources as a submenu
+
+- Agent: main
+- Files changed:
+  - `src/lib/data/campaign.ts`
+- Summary:
+  - Removed Gallery from top-level nav.
+  - Added children to the Resources entry: Events (#events) and Gallery
+    (#gallery). The parent Resources href stays #events.
+  - Top-level menu now: Home, About (▸ Vision), Manifesto, News, RTI Advocacy,
+    Resources (▸ Events, Gallery), Volunteer, Donate, Contact.
+
 Commit: pending
