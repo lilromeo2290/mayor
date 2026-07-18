@@ -388,4 +388,32 @@ Commit: f701da4
     For real secrecy, responses should also be omitted from the bundle
     until the code is verified server-side.
 
+Commit: 1f050cc
+
+---
+## 2026-07-19 — Enrich website background with layered depth
+
+- Agent: main
+- Files changed:
+  - `src/app/globals.css`
+- Summary:
+  - Replaced the flat `--background` body fill with a layered composition:
+    1. Tinted radial gradient top-left (NPP navy at 6% opacity).
+    2. Tinted radial gradient bottom-right (NPP red at 5% opacity).
+    3. Soft gold ellipse wash across the center (3% opacity).
+    4. Subtle 32px dot-grid SVG pattern (navy at 2.5% opacity).
+  - Background is `fixed` so the layers stay anchored while content
+    scrolls — creates a parallax-like depth effect.
+  - Added a thin gold top-accent line via `body::before` (6px tall,
+    8% opacity) for a premium framing edge at the very top of the page.
+  - Added `body > * { position: relative; z-index: 1 }` so content
+    always sits above the background layers.
+  - Added a `.section-divider` utility class — a horizontal gradient
+    hairline (transparent → navy → gold → red → transparent) that can
+    be inserted between sections for a layered feel. Not yet used
+    anywhere; available for future section separators.
+  - All tints use `color-mix(in oklch, ...)` so they automatically
+    adapt to dark mode (the dark-mode `--patriot-*` vars already point
+    at brighter versions of the same hues).
+
 Commit: pending
