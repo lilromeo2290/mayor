@@ -304,4 +304,20 @@ Commit: 0afeb5a
     (▸ Requested Information, Responses Received), Resources (▸ Gallery,
     Videos), Volunteer, Contact.
 
+Commit: cdb26f3
+
+---
+## 2026-07-19 — Remove News and Volunteer from top-level nav
+
+- Agent: main
+- Files changed:
+  - `src/lib/data/campaign.ts`
+- Summary:
+  - Removed "News" and "Volunteer" entries from `NAV_LINKS`.
+  - News section (`#news`) and Volunteer section (`#volunteer`) remain on
+    the page — only the nav menu items were removed.
+  - Top-level menu now: Home, About (▸ Vision), Manifesto, RTI Advocacy
+    (▸ Requested Information, Responses Received), Resources (▸ Gallery,
+    Videos), Contact.
+
 Commit: pending

@@ -804,7 +804,6 @@ export const NAV_LINKS: NavLink[] = [
     children: [{ label: 'Vision', href: '#vision' }],
   },
   { label: 'Manifesto', href: '#manifesto' },
-  { label: 'News', href: '#news' },
   {
     label: 'RTI Advocacy',
     href: '#rti',
@@ -821,7 +820,6 @@ export const NAV_LINKS: NavLink[] = [
       { label: 'Videos', href: '#videos' },
     ],
   },
-  { label: 'Volunteer', href: '#volunteer' },
   { label: 'Contact', href: '#contact' },
 ]
 
