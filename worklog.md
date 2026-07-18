@@ -202,4 +202,17 @@ Commit: e8901c1
   - Top-level menu now: Home, About (▸ Vision), Manifesto, News, Gallery,
     RTI Advocacy, Events, Volunteer, Donate, Contact.
 
+Commit: d0a46c0
+
+---
+## 2026-07-19 — Rename Events menu to Resources
+
+- Agent: main
+- Files changed:
+  - `src/lib/data/campaign.ts`
+- Summary:
+  - Top-level menu label "Events" → "Resources". The href still points to
+    `#events` (the events section id is unchanged); only the visible label
+    in the desktop nav and mobile drawer is renamed.
+
 Commit: pending

@@ -807,7 +807,7 @@ export const NAV_LINKS: NavLink[] = [
   { label: 'News', href: '#news' },
   { label: 'Gallery', href: '#gallery' },
   { label: 'RTI Advocacy', href: '#rti' },
-  { label: 'Events', href: '#events' },
+  { label: 'Resources', href: '#events' },
   { label: 'Volunteer', href: '#volunteer' },
   { label: 'Donate', href: '#donate' },
   { label: 'Contact', href: '#contact' },
