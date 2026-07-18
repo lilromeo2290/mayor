@@ -815,7 +815,6 @@ export const NAV_LINKS: NavLink[] = [
     ],
   },
   { label: 'Volunteer', href: '#volunteer' },
-  { label: 'Donate', href: '#donate' },
   { label: 'Contact', href: '#contact' },
 ]
 

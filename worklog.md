@@ -256,4 +256,21 @@ Commit: 615ce7f
   - Top-level menu: Home, About (▸ Vision), Manifesto, News, RTI Advocacy,
     Resources (▸ Gallery, Videos), Volunteer, Donate, Contact.
 
+Commit: 1ff8dbe
+
+---
+## 2026-07-19 — Remove Donate from top-level nav
+
+- Agent: main
+- Files changed:
+  - `src/lib/data/campaign.ts`
+- Summary:
+  - Removed the standalone "Donate" entry from `NAV_LINKS`.
+  - Note: the Donate section itself remains on the page (`#donate`), and
+    the standalone red "Donate" button in the header right cluster
+    (visible on md+ screens) plus the "Donate Now" CTA at the bottom of
+    the mobile drawer are unchanged — those are CTAs, not nav items.
+  - Top-level menu now: Home, About (▸ Vision), Manifesto, News, RTI
+    Advocacy, Resources (▸ Gallery, Videos), Volunteer, Contact.
+
 Commit: pending
