@@ -454,4 +454,25 @@ Commit: a62864c
     inside the RTI Advocacy section still links to `#volunteer` (the
     form), so visitors who want to sign up can still do so.
 
-Commit: pending
+Commit: 02a8092
+
+---
+## 2026-07-19 — Remove Donate CTAs from hero, header, and mobile drawer
+
+- Agent: main
+- Files changed:
+  - `src/components/site/sections/hero.tsx`
+  - `src/components/site/site-nav.tsx`
+- Summary:
+  - Removed the red "Donate" button from the desktop header right cluster
+    (was visible on md+ screens).
+  - Removed the "Donate Now" CTA from the bottom of the mobile drawer.
+    The "Join RTI Advocacy" outline CTA remains in the drawer footer.
+  - Removed the "Donate" outline CTA from the hero section's button row
+    (now: RTI Advocacy, Read Our Manifesto). Dropped the unused `Heart`
+    icon import from hero.tsx.
+  - The Donate section itself (`#donate`) remains on the page — only the
+    CTA buttons were removed. Visitors can still reach it via the
+    "Read latest report" link in the footer or via direct URL.
+
+Commit: c25fa9e
