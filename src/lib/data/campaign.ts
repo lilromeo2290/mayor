@@ -808,10 +808,10 @@ export const NAV_LINKS: NavLink[] = [
   { label: 'RTI Advocacy', href: '#rti' },
   {
     label: 'Resources',
-    href: '#events',
+    href: '#gallery',
     children: [
-      { label: 'Events', href: '#events' },
       { label: 'Gallery', href: '#gallery' },
+      { label: 'Videos', href: '#videos' },
     ],
   },
   { label: 'Volunteer', href: '#volunteer' },

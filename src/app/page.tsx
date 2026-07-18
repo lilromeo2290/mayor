@@ -8,6 +8,7 @@ import { ManifestoSection } from '@/components/site/sections/manifesto'
 import { NewsSection } from '@/components/site/sections/news'
 import { EventsSection } from '@/components/site/sections/events'
 import { GallerySection } from '@/components/site/sections/gallery'
+import { VideosSection } from '@/components/site/sections/videos'
 import { RtiAdvocacySection } from '@/components/site/sections/rti-advocacy'
 import { VolunteerSection } from '@/components/site/sections/volunteer'
 import { DonationSection } from '@/components/site/sections/donate'
@@ -29,6 +30,7 @@ export default function Home() {
         <NewsSection />
         <EventsSection />
         <GallerySection />
+        <VideosSection />
         <RtiAdvocacySection />
         <TestimonialsSection />
         <VolunteerSection />

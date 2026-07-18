@@ -230,4 +230,30 @@ Commit: 847070a
   - Top-level menu now: Home, About (▸ Vision), Manifesto, News, RTI Advocacy,
     Resources (▸ Events, Gallery), Volunteer, Donate, Contact.
 
+Commit: 615ce7f
+
+---
+## 2026-07-19 — Replace Events with Videos under Resources
+
+- Agent: main
+- Files changed:
+  - `src/lib/data/campaign.ts`
+  - `src/components/site/sections/videos.tsx` (new)
+  - `src/app/page.tsx`
+- Summary:
+  - Resources submenu children changed from [Events, Gallery] to
+    [Gallery, Videos]. Parent Resources href now points to #gallery.
+  - Created a new `VideosSection` component (`#videos`) with:
+    - Grid of video thumbnail cards (16:9 aspect, play button overlay,
+      "Video" badge in top-left).
+    - Click-to-open lightbox with embedded YouTube iframe (autoplay on
+      open).
+    - Empty state card ("Videos coming soon") when no videos are defined.
+  - `VIDEOS` array in `videos.tsx` is intentionally empty for now —
+    user can add `{ id, title, thumbnail, youtubeId }` entries to
+    populate the section.
+  - Added `<VideosSection />` to the page flow right after Gallery.
+  - Top-level menu: Home, About (▸ Vision), Manifesto, News, RTI Advocacy,
+    Resources (▸ Gallery, Videos), Volunteer, Donate, Contact.
+
 Commit: pending
