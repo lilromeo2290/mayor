@@ -144,6 +144,29 @@ function ResponsesGate({ onUnlock }: { onUnlock: () => void }) {
             {submitting ? 'Verifying…' : 'Unlock Section'}
           </Button>
         </form>
+
+        <div className="mt-6 flex items-center gap-3">
+          <div className="h-px flex-1 bg-border" />
+          <span className="text-xs uppercase tracking-widest text-muted-foreground">
+            or
+          </span>
+          <div className="h-px flex-1 bg-border" />
+        </div>
+
+        <a href="#contact" className="mt-4 block">
+          <Button
+            type="button"
+            variant="outline"
+            className="w-full border-patriot-red text-patriot-red hover:bg-patriot-red hover:text-white"
+          >
+            <KeyRound className="h-4 w-4 mr-2" />
+            Request Access
+          </Button>
+        </a>
+        <p className="mt-3 text-center text-xs text-muted-foreground leading-relaxed">
+          Don't have a code? Send a request to the campaign team and we'll
+          get back to you.
+        </p>
       </Card>
     </div>
   )

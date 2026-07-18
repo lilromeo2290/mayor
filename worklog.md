@@ -416,4 +416,21 @@ Commit: 1f050cc
     adapt to dark mode (the dark-mode `--patriot-*` vars already point
     at brighter versions of the same hues).
 
+Commit: eb24d30
+
+---
+## 2026-07-19 — Add Request Access button to RTI responses gate
+
+- Agent: main
+- Files changed:
+  - `src/components/site/sections/rti-tracker.tsx`
+- Summary:
+  - Added a divider ("or") and a new "Request Access" button below the
+    "Unlock Section" form in the ResponsesGate component.
+  - Button is outlined in NPP red with key-round icon, links to `#contact`.
+  - Helper text below the button: "Don't have a code? Send a request to
+    the campaign team and we'll get back to you."
+  - Lets visitors without a code self-route to the contact section
+    instead of being stuck on the locked card.
+
 Commit: pending
