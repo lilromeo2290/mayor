@@ -671,14 +671,6 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     span: 'tall',
   },
   {
-    id: 'g11',
-    category: 'Filling of Nomination Form',
-    title: 'The Declaration',
-    type: 'image',
-    src: '/gallery-11.jpg',
-    span: 'wide',
-  },
-  {
     id: 'g12',
     category: 'Filling of Nomination Form',
     title: '',
