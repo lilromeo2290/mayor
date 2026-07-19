@@ -2,23 +2,73 @@
 
 import * as React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { X, ZoomIn, Play } from 'lucide-react'
-import { Card } from '@/components/ui/card'
+import { X, ZoomIn, Play, ChevronLeft, ChevronRight } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { SectionHeading } from '@/components/site/section-heading'
-import { GALLERY_ITEMS, type GalleryItem } from '@/lib/data/campaign'
+import { GALLERY_ITEMS } from '@/lib/data/campaign'
 import { cn } from '@/lib/utils'
 
 const CATEGORIES = ['All', 'Filling of Nomination Form'] as const
 
 export function GallerySection() {
   const [active, setActive] = React.useState<(typeof CATEGORIES)[number]>('All')
-  const [lightbox, setLightbox] = React.useState<GalleryItem | null>(null)
+  const [lightboxIndex, setLightboxIndex] = React.useState<number | null>(null)
 
   const filtered = React.useMemo(
     () => (active === 'All' ? GALLERY_ITEMS : GALLERY_ITEMS.filter((g) => g.category === active)),
     [active]
   )
+
+  const openLightbox = (index: number) => setLightboxIndex(index)
+  const closeLightbox = () => setLightboxIndex(null)
+
+  const showPrev = React.useCallback(() => {
+    setLightboxIndex((cur) => {
+      if (cur === null || filtered.length === 0) return cur
+      return (cur - 1 + filtered.length) % filtered.length
+    })
+  }, [filtered.length])
+
+  const showNext = React.useCallback(() => {
+    setLightboxIndex((cur) => {
+      if (cur === null || filtered.length === 0) return cur
+      return (cur + 1) % filtered.length
+    })
+  }, [filtered.length])
+
+  // Keyboard navigation
+  React.useEffect(() => {
+    if (lightboxIndex === null) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeLightbox()
+      else if (e.key === 'ArrowLeft') showPrev()
+      else if (e.key === 'ArrowRight') showNext()
+    }
+    window.addEventListener('keydown', onKey)
+    // Lock body scroll while lightbox is open
+    const prevOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      window.removeEventListener('keydown', onKey)
+      document.body.style.overflow = prevOverflow
+    }
+  }, [lightboxIndex, showPrev, showNext])
+
+  // Touch swipe navigation
+  const touchStartX = React.useRef<number | null>(null)
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0]?.clientX ?? null
+  }
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return
+    const endX = e.changedTouches[0]?.clientX ?? touchStartX.current
+    const dx = endX - touchStartX.current
+    if (Math.abs(dx) > 50) {
+      if (dx < 0) showNext()
+      else showPrev()
+    }
+    touchStartX.current = null
+  }
 
   return (
     <section id="gallery" className="py-20 sm:py-28 bg-background scroll-anchor">
@@ -62,7 +112,7 @@ export function GallerySection() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: (i % 6) * 0.05 }}
-              onClick={() => setLightbox(item)}
+              onClick={() => openLightbox(i)}
               className="group relative w-full mb-5 rounded-2xl overflow-hidden shadow-premium hover:shadow-premium-lg transition-all duration-300 cursor-pointer break-inside-avoid block"
             >
               <img
@@ -108,39 +158,78 @@ export function GallerySection() {
 
       {/* Lightbox */}
       <AnimatePresence>
-        {lightbox && (
+        {lightboxIndex !== null && filtered[lightboxIndex] && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setLightbox(null)}
+            onClick={closeLightbox}
+            onTouchStart={onTouchStart}
+            onTouchEnd={onTouchEnd}
             className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-8"
           >
             <button
-              onClick={() => setLightbox(null)}
-              className="absolute top-5 right-5 h-11 w-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
+              onClick={closeLightbox}
+              className="absolute top-5 right-5 h-11 w-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors z-10"
               aria-label="Close lightbox"
             >
               <X className="h-6 w-6" />
             </button>
+
+            {/* Prev */}
+            {filtered.length > 1 && (
+              <button
+                onClick={(e) => {
+                  e.stopPropagation()
+                  showPrev()
+                }}
+                className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-white/10 hover:bg-white/25 text-white flex items-center justify-center transition-colors z-10"
+                aria-label="Previous image"
+              >
+                <ChevronLeft className="h-7 w-7" />
+              </button>
+            )}
+
+            {/* Next */}
+            {filtered.length > 1 && (
+              <button
+                onClick={(e) => {
+                  e.stopPropagation()
+                  showNext()
+                }}
+                className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-white/10 hover:bg-white/25 text-white flex items-center justify-center transition-colors z-10"
+                aria-label="Next image"
+              >
+                <ChevronRight className="h-7 w-7" />
+              </button>
+            )}
+
             <motion.div
+              key={filtered[lightboxIndex].id}
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ duration: 0.25 }}
               onClick={(e) => e.stopPropagation()}
+              onTouchStart={(e) => e.stopPropagation()}
+              onTouchEnd={(e) => e.stopPropagation()}
               className="relative max-w-5xl w-full"
             >
               <img
-                src={lightbox.src}
-                alt={lightbox.title}
-                className="w-full max-h-[80vh] object-contain rounded-lg"
+                src={filtered[lightboxIndex].src}
+                alt={filtered[lightboxIndex].title}
+                className="w-full max-h-[78vh] object-contain rounded-lg"
               />
               <div className="mt-4 text-center text-white">
                 <Badge className="bg-patriot-gold text-patriot-navy mb-2">
-                  {lightbox.category}
+                  {filtered[lightboxIndex].category}
                 </Badge>
-                <h4 className="font-serif text-xl font-bold">{lightbox.title}</h4>
+                <h4 className="font-serif text-xl font-bold">{filtered[lightboxIndex].title}</h4>
+                {filtered.length > 1 && (
+                  <div className="mt-2 text-xs text-white/60 font-medium">
+                    {lightboxIndex + 1} / {filtered.length} · use ← → to navigate
+                  </div>
+                )}
               </div>
             </motion.div>
           </motion.div>
