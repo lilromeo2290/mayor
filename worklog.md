@@ -476,3 +476,19 @@ Commit: 02a8092
     "Read latest report" link in the footer or via direct URL.
 
 Commit: c25fa9e
+
+---
+## 2026-07-19 — Remove Download CV button from About section
+
+- Agent: main
+- Files changed:
+  - `src/components/site/sections/about.tsx`
+- Summary:
+  - Removed the navy "Download CV" button that was anchored at the
+    bottom edge of the candidate portrait card in the About section.
+    It previously linked to `#media` (the Media Center).
+  - Dropped the now-unused `Download` icon import and the unused
+    `Button` import from about.tsx.
+  - No other Download-CV references exist on the site.
+
+Commit: b4629b3
