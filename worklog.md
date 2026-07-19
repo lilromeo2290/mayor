@@ -529,3 +529,23 @@ Commit: b4629b3
   - Dropped unused `Card` and `GalleryItem` imports.
 
 Commit: 0d4142c
+
+---
+## 2026-07-19 — Remove 'On the Campaign Trail' gallery item
+
+- Agent: main
+- Files changed:
+  - `src/lib/data/campaign.ts`
+- Summary:
+  - Removed the first gallery item (`g1`), whose title was
+    "On the Campaign Trail" (image: `/gallery-1.jpg`, span: tall).
+    User flagged this title after using the new gallery lightbox
+    navigation and seeing it surface under the image.
+  - The gallery now starts at the previous `g2` ("With Supporters")
+    and contains 11 items instead of 12.
+  - The image file `/public/gallery-1.jpg` itself was not deleted from
+    disk — only the data-array reference was removed. The file is
+    unreferenced now and can be safely deleted from `/public/` later
+    if desired.
+
+Commit: 00d60c0
