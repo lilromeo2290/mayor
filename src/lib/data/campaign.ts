@@ -599,14 +599,6 @@ export type GalleryItem = {
 
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
-    id: 'g1',
-    category: 'Filling of Nomination Form',
-    title: 'On the Campaign Trail',
-    type: 'image',
-    src: '/gallery-1.jpg',
-    span: 'tall',
-  },
-  {
     id: 'g2',
     category: 'Filling of Nomination Form',
     title: 'With Supporters',
