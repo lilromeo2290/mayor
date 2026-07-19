@@ -584,3 +584,22 @@ Commit: 00d60c0
     which is the WCAG-correct way to mark decorative images.
 
 Commit: 02ee2f3
+
+---
+## 2026-07-19 — Remove 'The Declaration' gallery item
+
+- Agent: main
+- Files changed:
+  - `src/lib/data/campaign.ts`
+- Summary:
+  - Removed the gallery item `g11` titled "The Declaration"
+    (image: `/gallery-11.jpg`, span: wide). It was the last remaining
+    titled image in the gallery.
+  - The gallery now contains 10 items (g2–g10, g12) — all untitled.
+    The lightbox counter now reads "1 / 10" through "10 / 10".
+  - The image file `/public/gallery-11.jpg` itself was not deleted
+    from disk — only the data-array reference. The file is
+    unreferenced now (confirmed via grep across `src/`) and can be
+    safely deleted from `/public/` later if desired.
+
+Commit: 62a7317
