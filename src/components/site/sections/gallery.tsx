@@ -224,7 +224,9 @@ export function GallerySection() {
                 <Badge className="bg-patriot-gold text-patriot-navy mb-2">
                   {filtered[lightboxIndex].category}
                 </Badge>
-                <h4 className="font-serif text-xl font-bold">{filtered[lightboxIndex].title}</h4>
+                {filtered[lightboxIndex].title && (
+                  <h4 className="font-serif text-xl font-bold">{filtered[lightboxIndex].title}</h4>
+                )}
                 {filtered.length > 1 && (
                   <div className="mt-2 text-xs text-white/60 font-medium">
                     {lightboxIndex + 1} / {filtered.length} · use ← → to navigate

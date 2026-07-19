@@ -601,7 +601,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'g2',
     category: 'Filling of Nomination Form',
-    title: 'With Supporters',
+    title: '',
     type: 'image',
     src: '/gallery-2.jpg',
     span: 'normal',
@@ -609,7 +609,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'g3',
     category: 'Filling of Nomination Form',
-    title: 'Community Engagement',
+    title: '',
     type: 'image',
     src: '/gallery-3.jpg',
     span: 'wide',
@@ -617,7 +617,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'g4',
     category: 'Filling of Nomination Form',
-    title: 'On the Ground',
+    title: '',
     type: 'image',
     src: '/gallery-4.jpg',
     span: 'normal',
@@ -625,7 +625,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'g5',
     category: 'Filling of Nomination Form',
-    title: 'Meeting the People',
+    title: '',
     type: 'image',
     src: '/gallery-5.jpg',
     span: 'tall',
@@ -633,7 +633,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'g6',
     category: 'Filling of Nomination Form',
-    title: 'Campaign Moment',
+    title: '',
     type: 'image',
     src: '/gallery-6.jpg',
     span: 'wide',
@@ -641,7 +641,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'g7',
     category: 'Filling of Nomination Form',
-    title: 'A Movement Grows',
+    title: '',
     type: 'image',
     src: '/gallery-7.jpg',
     span: 'tall',
@@ -649,7 +649,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'g8',
     category: 'Filling of Nomination Form',
-    title: 'Voices Heard',
+    title: '',
     type: 'image',
     src: '/gallery-8.jpg',
     span: 'wide',
@@ -657,7 +657,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'g9',
     category: 'Filling of Nomination Form',
-    title: 'Building Together',
+    title: '',
     type: 'image',
     src: '/gallery-9.jpg',
     span: 'normal',
@@ -665,7 +665,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'g10',
     category: 'Filling of Nomination Form',
-    title: 'A Future in Focus',
+    title: '',
     type: 'image',
     src: '/gallery-10.jpg',
     span: 'tall',
@@ -681,7 +681,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'g12',
     category: 'Filling of Nomination Form',
-    title: 'With the People',
+    title: '',
     type: 'image',
     src: '/gallery-12.jpg',
     span: 'wide',
