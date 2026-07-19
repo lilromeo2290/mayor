@@ -492,3 +492,40 @@ Commit: c25fa9e
   - No other Download-CV references exist on the site.
 
 Commit: b4629b3
+
+---
+## 2026-07-19 — Gallery lightbox prev/next navigation
+
+- Agent: main
+- Files changed:
+  - `src/components/site/sections/gallery.tsx`
+- Summary:
+  - Refactored the gallery lightbox from single-item state to index-based
+    state (`lightboxIndex: number | null`), so users can scroll through
+    the whole gallery without closing and re-clicking each image.
+  - Navigation options:
+    1. **Prev / Next buttons** — chevron buttons anchored at the left
+       and right middle edges of the lightbox (12×12 on desktop,
+       slightly inset on mobile). Clicking stops propagation so it
+       doesn't close the lightbox.
+    2. **Keyboard arrows** — Left/Right arrows navigate; Escape closes.
+       Listener only active while the lightbox is open.
+    3. **Touch swipe** — Horizontal swipe (>50px) advances to next
+       (swipe left) or previous (swipe right) image. Works on mobile.
+    4. **Counter** — A small "3 / 12 · use ← → to navigate" hint under
+       the image title tells the user where they are and how to move.
+  - Navigation is **wrap-around** — next from the last image wraps to
+    the first, prev from the first wraps to the last.
+  - Body scroll is locked while the lightbox is open (restored on
+    close) so the page behind doesn't jump around while navigating.
+  - Added a `key={filtered[lightboxIndex].id}` to the inner motion.div
+    so framer-motion animates the image transition (fade + scale) on
+    each navigation.
+  - Prev/Next buttons and the swipe hint are hidden when only one
+    image is in the filtered list (e.g. empty category edge case).
+  - The prev/next navigates the **filtered** list — if a category
+    filter is active, only images in that category are included in
+    the rotation.
+  - Dropped unused `Card` and `GalleryItem` imports.
+
+Commit: 0d4142c
