@@ -549,3 +549,38 @@ Commit: 0d4142c
     if desired.
 
 Commit: 00d60c0
+
+---
+## 2026-07-19 — Clear 10 gallery image titles (keep The Declaration)
+
+- Agent: main
+- Files changed:
+  - `src/lib/data/campaign.ts`
+  - `src/components/site/sections/gallery.tsx`
+- Summary:
+  - Cleared the `title` field to `''` for the following 10 gallery
+    items (per user request — these captions were showing under the
+    images in the lightbox and the user wanted them gone):
+      - g2: "With Supporters"
+      - g3: "Community Engagement"
+      - g4: "On the Ground"
+      - g5: "Meeting the People"
+      - g6: "Campaign Moment"
+      - g7: "A Movement Grows"
+      - g8: "Voices Heard"
+      - g9: "Building Together"
+      - g10: "A Future in Focus"
+      - g12: "With the People"
+  - Kept `title: 'The Declaration'` on g11 — that one was not in the
+    user's removal list, so it still shows under that image.
+  - In `gallery.tsx` lightbox: wrapped the `<h4>` title element in a
+    conditional (`{filtered[lightboxIndex].title && (...)}`) so empty
+    titles don't leave a blank space between the category badge and
+    the counter.
+  - The category badge ("Filling of Nomination Form") and the
+    "x / y · use ← → to navigate" counter still render under every
+    image — only the title text was suppressed for the 10 items.
+  - Cleared titles also serve as empty alt-text on the `<img>` tag,
+    which is the WCAG-correct way to mark decorative images.
+
+Commit: 02ee2f3
