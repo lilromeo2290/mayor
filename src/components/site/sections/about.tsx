@@ -6,11 +6,9 @@ import {
   GraduationCap,
   Briefcase,
   Award,
-  Download,
   Quote,
   BadgeCheck,
 } from 'lucide-react'
-import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { SectionHeading } from '@/components/site/section-heading'
@@ -61,15 +59,6 @@ export function AboutSection() {
                   </div>
                 </div>
               </Card>
-              <a
-                href="#media"
-                className="absolute -bottom-4 left-1/2 -translate-x-1/2 inline-flex"
-              >
-                <Button className="bg-patriot-navy hover:bg-patriot-navy/90 text-white shadow-premium-lg">
-                  <Download className="h-4 w-4 mr-2" />
-                  Download CV
-                </Button>
-              </a>
             </div>
           </motion.div>
 
